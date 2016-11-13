@@ -1,72 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Outchem</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script src="js/1.5.8/angular.min.js"></script> 
+<script src="js/1.5.8/angular-route.js"></script>
+<script src="js/1.5.8/app.js"></script>
 </head>
 
 <body>
-	<header>
-    	<div class="top-header-space">
-        </div>
-    	<div class="container-fluid greenBackground top-header">
-        	<div class="row">
-            	<div class="col-md-4">
-                	<img src="images/header-logo.png" />
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <section>
-    	<div class="container-fluid">
-        	<div class="row">
-            	<div class="col-md-4 login-container-box">
-                	<div class="col-md-12">
-                    	<h3 class="darkGray"> Login Now</h3>
-                        <h6>Enter your username and password:</h6>
-                    </div>
-                    <div class="col-md-12">
-                    	 <form id="login-form" action="#" method="post" >
-                            <div class="form-group">
-                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="text-center">
-                                            <a href="#" class="forgot-password">Forgot Password?</a>
-                                        </div>
-                                    </div>
-                        
-                        
-                                    <div class="col-sm-6">
-                                        <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-login btn-login greenBackground" value="Login">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </form>
+
+				
+                <div class="col-lg-4">
+                	<h3>Login Now</h3>
+                    <br />
+                    <p class="font18">Enter your username and password:</p>
+                    <br />
+                    <input type="text" name="username" id="username" class="form-control border-left" placeholder="Email ID or Username" />
+                    <br />
+                    <input type="password" name="pwd" id="pwd" class="form-control border-left" placeholder="Password" />
+                    <br />
+                    <div class="col-lg-12">
+                    	<div class="col-lg-6 pull-left">
+                        	<a href="">Forgot Password?</a>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                        	<input type="submit" name="login" id="login" class="loginBtn" value="Login  >" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-    	<div class="container-fluid greenBackground loginFooterSection">
-        	<div class="row">
-            	<div class="col-md-12">
-                <p class="text-center">Don’t have an account yet? Register here!</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+				
+                <div class="col-lg-4"></div>
+  
 </body>
 </html>

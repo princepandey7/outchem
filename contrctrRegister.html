@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script src="js/1.5.8/angular.min.js"></script> 
+<script src="js/1.5.8/angular-route.js"></script>
+<script src="js/1.5.8/app.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body ng-app="outChem">
+
+<div class="container">
+	<div class="col-lg-4">
+                	<h3 class="text-center">Contractor Registration Form</h3>
+                    <br/>
+					 <div class="row">
+                    	<div class="col-lg-4">
+                        	<div class="btn1">
+								<label>
+								  <input type="radio" name="radio" id="CMO" /><span>CMO</span>
+								</label>
+							</div>
+                        </div>
+                        <div class="col-lg-4">
+                        	<div class="btn1">
+								<label>
+								  <input type="radio" name="radio" id="CRO" /><span>CRO</span>
+								</label>
+							</div>
+                        </div>	
+						<div class="col-lg-4">
+                        	<div class="btn1">
+								<label>
+								  <input type="radio" name="radio" id="BOTH" /><span>BOTH</span>
+								</label>
+							</div>
+                        </div>						
+                    </div><br/>
+                    <div class="row">
+                    	<div class="col-lg-6">
+                        	<input type="text" name="fname" id="fname" class="form-control" placeholder="First Name*" />
+                        </div>
+                        <div class="col-lg-6">
+                        	<input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name*" />
+                        </div>						
+                    </div>
+                    <br />
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email ID*" />
+                    <br />
+                    <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Password*" />
+                    <br />
+                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone number*" />
+                    <br />
+                    <div class="row">
+                    	<div class="col-lg-6">
+                        	<select class="form-control" style="border:1; -webkit-appearance: none; -moz-appearance: none; background:url(images/arrow.png) no-repeat;background-position:right center !important; margin-right:2px;">
+                            	<option value="">City*</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                        	<select class="form-control" style="border:1; -webkit-appearance: none; -moz-appearance: none; background:url(images/arrow.png) no-repeat;background-position:right center !important; margin-right:2px;">
+                            	<option value="">Country*</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                    	<div class="col-lg-8">
+						<label>
+							<input type="checkbox" name="chk"  /><span>Terms & Conditions*</span>
+						</label>
+                        
+                    		
+                        </div>
+                        <div class="col-lg-4" style="text-align:right;">
+                        	<input type="submit" name="register" id="register" class="loginBtn" value="Register  >" />
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+				
+</body>
+</html>

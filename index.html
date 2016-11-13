@@ -2,48 +2,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Outchem</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+<title>OutChem</title>
+<script src="js/1.5.8/angular.min.js"></script> 
+<script src="js/1.5.8/angular-route.js"></script>
+<script src="js/1.5.8/app.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
 </head>
 
-<body>
-	<header>
-    	<div class="top-header-space">
+<body ng-app="outChem">
+<nav class="navbar navbar-default wrapperHead">
+      <div class="container" >
+        <div class="navbar-header">
+          <div class="row">
+			<img style="align:center; padding-left:-100px; padding-right:-40%;"src="images/logo2.png" class="img-responsive">
+		  </div>
         </div>
-    	<div class="container-fluid greenBackground top-header">
-        	<div class="row">
-            	<div class="col-md-4">
-                	<img src="images/header-logo.png" />
-                </div>
+    
+      </div>
+</nav>
+<div class="wrapperContent">
+	<div class="container">
+	
+    	<div class="row padding-tb50">
+        	<div class="col-lg-12">
+            	<div class="col-lg-4"></div>
+				
+                	<div ng-view></div>
+               
+                <div class="col-lg-4"></div>
             </div>
         </div>
-    </header>
-    
-    <section>
-    	<div class="container-fluid">
-        	
-        </div>
-    </section>
-    
-    <footer>
-    	<div class="container-fluid light-gray-bg footer-text">
-        	<div class="row">
-            	<div class="col-md-4">
-               		<p>Copyright © All Rights reserved.</p>
-                </div>
-                <div class="col-md-4">
-           		  <ul class="social-media-list">
-                    	<li><img src="images/fackboox-icon.png" /></li>
-                        <li><img src="images/twitter-icon.png" /></li>
-                        <li><img src="images/google-icon.png" /></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 chat-icon-box">
-					<p> <img src="images/chat-icon.png" /> Chat with the sales team</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom wrapper" role="navigation">
+  <div class="container padding-tb10">
+	<div class="row text-center">
+		<p align="center" class="font18" style="color:#fff;">Don't have an account yet? <a align="center" href="#register" style="color:#fff;">Register Here</a></p>
+	<div>
+  </div>
+</nav>
 </body>
 </html>
