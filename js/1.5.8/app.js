@@ -1,20 +1,34 @@
 var app = angular.module("outChem", ['ngRoute']);
 app.config(['$routeProvider',function($routeProvider) {
     $routeProvider.
-    when('/register', {
+   when('/register', {
         templateUrl : 'signupOpt.html'
     }).
 	 when('/buyerRegistration', {
         templateUrl : 'buyerRegistration.html'
     }).
-	 when('/contrctrRegister', {
+	when('/contrctrRegister', {
         templateUrl : 'contrctrRegister.html'
     }).
+
+    when('/buyerProfile', {
+        templateUrl : 'buyerProfileView.html'
+    }).
+    when('/contractorProfile', {
+        templateUrl : 'contractorProfileMain.html'
+    }).
+
     otherwise({
 		templateUrl: 'login.html'
 	});
 }]);
 
+app.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
+    $rootScope.$on('$routeChangeSuccess', function(e, current, pre) {
+      console.log('Current route name: ' + $location.path());
+      console.log($routeParams);
+    });
+}]);
 
 app.controller('TabController', ['$scope', function($scope) {
     $scope.tab = 1;
