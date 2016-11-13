@@ -18,6 +18,19 @@ app.config(['$routeProvider',function($routeProvider) {
         templateUrl : 'contractorProfileMain.html'
     }).
 
+    when('/home1', {
+        templateUrl : 'homePage1.html'
+    }).
+    when('/home2', {
+        templateUrl : 'homePage2.html'
+    }).
+    when('/adminDashboard', {
+        templateUrl : 'adminDashboard.html'
+    }).
+    when('/adminProfile', {
+        templateUrl : 'adminProfile.html'
+    }).
+
     otherwise({
 		templateUrl: 'login.html'
 	});
