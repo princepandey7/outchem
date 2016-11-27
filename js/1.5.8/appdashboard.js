@@ -1,17 +1,34 @@
 var app = angular.module("outChem", ['ngRoute']);
 app.config(['$routeProvider',function($routeProvider) {
     $routeProvider.
-   when('/register', {
-        templateUrl : 'signupOpt.html'
+
+    when('/buyerProfile', {
+        templateUrl : 'buyerProfileView.html'
     }).
-	 when('/buyerRegistration', {
-        templateUrl : 'buyerRegistration.html'
+    when('/contractorProfile', {
+        templateUrl : 'contractorProfileMain.html'
     }).
-	when('/contrctrRegister', {
-        templateUrl : 'contrctrRegister.html'
+    when('/home1', {
+        templateUrl : 'homePage1.html'
     }).
+    when('/home2', {
+        templateUrl : 'homePage2.html'
+    }).
+    when('/adminDashboard', {
+        templateUrl : 'adminDashboard.html'
+    }).
+    when('/adminProfile', {
+        templateUrl : 'adminProfile.html'
+    }).
+    when('/companyDashboard', {
+        templateUrl : 'companyDashboard.html'
+    }).
+    // when('/contractorProfileMain', {
+    //     templateUrl : 'contractorProfileMain.html'
+    // }).
+
     otherwise({
-		templateUrl: 'login.html'
+		templateUrl: 'buyerProfileView.html'
 	});
 }]);
 

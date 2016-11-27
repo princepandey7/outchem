@@ -22,6 +22,11 @@ a:hover{ text-decoration: none; }
 .padding-lr10{padding:5px 10px;}
 .font18{font-size:18px;}
 
+.greyBackground{background: #eeeeee;}
+.whiteBackground{background: #fff}
+.padding-tb5{padding: 5px;}
+.padding-tb0{padding: 0px;}
+
 .loginBtn{display: inline-block; padding: 3px 10px; font-size: 18px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: #fff; background-color: #51b821; border: none; border-radius: 8px; box-shadow: 0 5px #397f18;}
 .btn {
     background-color: white;
@@ -171,8 +176,6 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 
 
 
-
-
 @media screen and (max-width: 480px) {
 .topPara .intro h1{ font-size: 31px!important; }
 .topPara .intro h2{ font-size: 31px!important; }
@@ -182,3 +185,22 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 .contactdiv ul li{ font-size: 35px; }
 .contactdiv{ height: 600px; }
 }
+
+
+.company-review-box{margin: 15px;}
+.company-review-box h2{background:#51b821; color: #fff; text-align: center; font-size: 16px; font-weight: bold; padding: 10px; border-radius: 2px 2px 0px 0px; text-transform: uppercase; margin: 0px}
+
+.company-list-section{margin: 0px; background:#fff; display: inline-block; padding: 0px}
+.company-list-section li{display: flex;list-style: outside none none;margin: 0; padding: 10px; border-bottom: 1px solid #ddd }
+.company-section-box h3{margin: 0px; font-size: 13px; color: #9d9d9d; font-weight: bold; text-transform: capitalize; padding-top: 5px}
+.company-section-box h3 span{  color: #51b821; font-size: 12px;font-weight: normal;padding-left: 15px; }
+.company-section-box p{ font-size: 12px; color: #9d9d9d }
+.company-section-box a{color: #51b821;float: right; font-size: 9px; padding-right: 15px; text-decoration: none;}
+
+
+
+.social-media-icon ul{}
+.social-media-icon li{list-style: none;float: left; width: 50px; padding-right: 10px;}
+.social-media-icon li img{width: 100%;}
+.footer-chat-icon img{width: 12%}
+.footer-wrapper{background-color: #f5f5f5; color: #454545; padding: 15px 0px; }
