@@ -26,6 +26,9 @@ a:hover{ text-decoration: none; }
 .whiteBackground{background: #fff}
 .padding-tb5{padding: 5px;}
 .padding-tb0{padding: 0px;}
+.padding0{ padding-right: 0px!important; padding-left: 0px!important }
+.marginRight-0{ margin-right: 0px!important; }
+.margin0{ margin-left: 0px!important; margin-right: 0px!important }
 
 .loginBtn{display: inline-block; padding: 3px 10px; font-size: 18px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: #fff; background-color: #51b821; border: none; border-radius: 8px; box-shadow: 0 5px #397f18;}
 .btn {
@@ -212,3 +215,7 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 .contractoNav li a{ border-bottom: 1px solid #eeeeee; border-radius: 0px; font-size: 18px; margin-top: 30px; }
 .contractoNav li:nth-child(2) a{ border-left: 1px solid #eeeeee; border-right: 1px solid #eeeeee }
+.categoriesDetail{ margin-top: 30px; }
+.categoriesDetail label{ line-height: 27px; color: #555555; }
+
+.fullWidthImg{ width: 100%!important; height:auto;}
