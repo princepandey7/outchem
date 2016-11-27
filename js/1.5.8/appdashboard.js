@@ -49,3 +49,26 @@ app.controller('TabController', ['$scope', function($scope) {
     };
 }]);
 
+app.controller('topKeywordsController', function($scope){
+    $scope.topKeywords = {
+       keywords:[
+          {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10},
+          {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10},
+          {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10},
+          {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10},
+          {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10}
+       ],
+    };
+})
+
+app.controller('topCompanyController', function($scope){
+    $scope.topCompany = {
+       keywords:[
+          {keyword_name:'Keyword',categories:'Categories', rank:1},
+          {keyword_name:'Keyword',categories:'Categories', rank:1},
+          {keyword_name:'Keyword',categories:'Categories', rank:1},
+          {keyword_name:'Keyword',categories:'Categories', rank:1},
+          {keyword_name:'Keyword',categories:'Categories', rank:1}
+       ],
+    };
+})
