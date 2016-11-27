@@ -165,16 +165,20 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 }
 
 .search-div{ margin-top: 20px }
-.search-div .input-group{  max-width: 300px; margin: 0 auto }
+.search-div .input-group{max-width: 300px; margin: 0 auto }
 .search-div .input-group .btn{ border: 1px solid #ccc; height: 34px; background: #cccccc; }
 .carausolHome{ margin: 100px 0px;  }
-.carausolHome .filcolor{ background: #51B821; height: auto;
-	padding: 160px 0px; text-align: center; color: #ffffff }
-.carausolHome h2{ font-size: 22px; text-align: center; }
+.carausolHome .filcolor{ background: #51B821; height: auto;padding: 155px 0px; text-align: center; color: #ffffff }
+.carausolHome .filcolor img{ width: 50px; }
+.carausolHome h2{ font-size: 22px; text-align: center; font-weight: bold; }
 .carausolHome p{ text-align: center; }
+.carausolHome .item img{ width: 50px; }
 .img-center{ margin-left: auto; margin-right: auto; display: block; }
-
-
+.carausolHome h1{ font-size: 22px; text-align: center;}
+.productCalausol, .regulatoryCalausol{ margin-top: 30px; }
+.carousel-indicators li {border: 1px solid #51B821;}
+.carousel-indicators{ bottom: -20px; }
+.carousel-indicators .active{ background:#51B821  }
 
 @media screen and (max-width: 480px) {
 .topPara .intro h1{ font-size: 31px!important; }
