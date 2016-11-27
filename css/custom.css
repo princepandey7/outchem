@@ -201,10 +201,14 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 .company-section-box p{ font-size: 12px; color: #9d9d9d }
 .company-section-box a{color: #51b821;float: right; font-size: 9px; padding-right: 15px; text-decoration: none;}
 
-
-
 .social-media-icon ul{}
 .social-media-icon li{list-style: none;float: left; width: 50px; padding-right: 10px;}
 .social-media-icon li img{width: 100%;}
 .footer-chat-icon img{width: 12%}
 .footer-wrapper{background-color: #f5f5f5; color: #454545; padding: 15px 0px; }
+
+.formElement{ padding: 30px 100px; }
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{ background: #ffffff;
+color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
+.contractoNav li a{ border-bottom: 1px solid #eeeeee; border-radius: 0px; font-size: 18px; margin-top: 30px; }
+.contractoNav li:nth-child(2) a{ border-left: 1px solid #eeeeee; border-right: 1px solid #eeeeee }
