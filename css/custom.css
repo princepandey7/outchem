@@ -10,6 +10,7 @@ font-family: 'Questrial', sans-serif;
 }
 a{ color: #454545 }
 a:hover{ text-decoration: none; }
+.noborder{ border: none; }
 
 .wrapperHead{ padding:8px 0px; background:#51b821;}
 .wrapper{background:#51b821;}
