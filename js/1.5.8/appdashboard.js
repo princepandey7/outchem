@@ -59,7 +59,7 @@ app.controller('topKeywordsController', function($scope){
           {keyword_name:'Keyword',categories:'Categories', rank:1,count:1500,price:10}
        ],
     };
-})
+});
 
 app.controller('topCompanyController', function($scope){
     $scope.topCompany = {
@@ -71,4 +71,46 @@ app.controller('topCompanyController', function($scope){
           {keyword_name:'Keyword',categories:'Categories', rank:1}
        ],
     };
+});
+
+app.controller('packageSummaryController', function($scope){
+    $scope.packageSummary = {
+       packages:[
+          {package_name:'Keyword',package:'Package', days:180,location:'Canada'},
+          {package_name:'Keyword',package:'Package', days:365,location:'India'},
+          {package_name:'Keyword',package:'Package', days:365,location:'France'},
+          {package_name:'Keyword',package:'Package', days:180,location:'Netherlands'},
+          {package_name:'Keyword',package:'Package', days:120,location:'India'}
+       ],
+    };
+});
+
+
+
+
+app.directive('imageCheckbox', function(myService) {
+  return {
+    restrict: 'A',
+    link: function(scope, el, attr) {
+      scope.isSelected = el.find('input').val() == 'false';
+      
+      myService.getData().then(function(o){
+        console.log(o);
+        scope.bgCol = o.data[0].type.color;
+      });
+      el.on('click', function() {
+        scope.isSelected = !scope.isSelected;
+        if (scope.isSelected) scope.bgCol = '#ccc';
+        else scope.bgCol = '#000';
+        scope.$apply();
+      });
+    }
+  }
+})
+app.service('myService', function($http){
+  return {
+    getData: function() {
+      return $http.get('color.json');
+    }
+  }
 })

@@ -117,27 +117,59 @@
 			            	</select>
 			            </div>
 			            <div class="form-group col-sm-12">
-			            	<select class="form-control">
+			            	<select class="form-control" disabled="disabled">
 			            		<option>Select Package </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
-			               <div class="form-group col-sm-12">
-			            	<select class="form-control">
+			               <div class="form-group col-sm-12" >
+			            	<select class="form-control" disabled="disabled">
 			            		<option>Select Days </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
-			               <div class="form-group col-sm-12">
-			            	<select class="form-control">
+			               <div class="form-group col-sm-12" >
+			            	<select class="form-control" disabled="disabled">
 			            		<option>Select Location </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
 			            <div class="form-group text-right">
-							<button class="loginBtn">Submit &nbsp; &#x276f;</button>
+			            	<input class="loginBtn" type="button" value="Submit &nbsp; &#x276f;" disabled="disabled" />
 						</div>
 					</form>
+					<div class="row">
+						<div class="col-sm-12 packageDetailsBox">
+							<h5> Package Summary</h5>
+							<div class="col-md-12 padding-tb0">
+								<div class="top-keyword-box" ng-controller="packageSummaryController">
+									<table class="table table-bordered packageSummaryTable">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Keywork</th>
+												<th>Package</th>
+												<th>Days</th>
+												<th>Location</th>
+												<!-- <th>Edit</th> -->
+											</tr>
+										</thead>
+										<tbody>
+											<!-- 51b821  d8d8d8 -->
+											<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
+												<td> </td>
+												<td>{{ packag.package_name }}</td>
+												<td>{{ packag.package }}</td>
+												<td>{{ packag.days }}</td>
+												<td>{{ packag.location }}</td>
+												<!-- <td>Edit</td> -->
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
         </div>
