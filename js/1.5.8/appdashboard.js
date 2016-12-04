@@ -107,10 +107,3 @@ app.directive('imageCheckbox', function(myService) {
     }
   }
 })
-app.service('myService', function($http){
-  return {
-    getData: function() {
-      return $http.get('color.json');
-    }
-  }
-})

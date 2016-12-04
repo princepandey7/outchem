@@ -312,3 +312,4 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
     color: #454545;
     font-size: 12px;
 }
+.package-edit-icon{background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
