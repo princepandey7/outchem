@@ -12,7 +12,7 @@ a{ color: #454545 }
 a:hover{ text-decoration: none; }
 .noborder{ border: none; }
 
-.wrapperHead{ padding:8px 0px; background:#255b1b; color: #ffffff}
+.wrapperHead{ padding:8px 0px; background:#255b1b; color: #ffffff; border-radius:0px; }
 .wrapper{background:#255b1b;}
 .wrapperContent{width:100%;  }
 .padding-tb10{padding:10px 0px;}
