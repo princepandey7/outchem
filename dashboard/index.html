@@ -23,16 +23,19 @@
 <body ng-app="outChem">
 <nav class="navbar navbar-default wrapperHead">
       <div class="container" >
-        <div class="navbar-header">
+        <div class="navbar-header col-sm-4">
             <div class="row">
 			    <img style="align:center; padding-left:-100px; padding-right:-40%; max-width:333px;" src="../images/outchem logo final white.png" class="img-responsive">
 		    </div>
         </div>
-        <div class="pull-right col-lg-3">
+        <!-- <div class="pull-right col-lg-3">
             Welcome Admin
             <img src="../images/header-img1.png">
+        </div> -->
+        <p class="howitworks col-sm-4">How it works</p>
+        <div class="text-right loginLink col-sm-4">
+            <a href="#" data-toggle="modal" data-target="#myModal">Login</a> | <a href="" data-toggle="modal" data-target="#myModal">Sign-up</a>
         </div>
-        <p class="howitworks">How it works</p>
       </div>
 </nav>
 <div class="wrapperContent">
@@ -67,3 +70,24 @@
 </nav>
 </body>
 </html>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
