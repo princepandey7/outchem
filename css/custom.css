@@ -131,6 +131,8 @@ input[name='chk']+span:before{
 input[name='chk']:checked+span:before{		
 	  content: '✔';		 	  
 	  color: #51b821;
+	  text-align: center;
+	  line-height: 15px;
 }
 .btn1 {
     background-color: white;
@@ -172,7 +174,7 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 .search-div .input-group{max-width: 300px; margin: 0 auto }
 .search-div .input-group .btn{ border: 1px solid #ccc; height: 34px; background: #cccccc; }
 .carausolHome{ margin: 100px 0px;  }
-.carausolHome .filcolor{ background: #51B821; height: auto;padding: 155px 0px; text-align: center; color: #ffffff }
+.carausolHome .filcolor{ background: #51B821; height: auto;padding: 125px 0px; text-align: center; color: #ffffff }
 .carausolHome .filcolor img{ width: 50px; }
 .carausolHome h2{ font-size: 22px; text-align: center; font-weight: bold; }
 .carausolHome p{ text-align: center; }
@@ -230,7 +232,8 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 
 .progress-bar canvas{ height: 11px; }
 .input-groupA{ margin-right: -16px; }
-.input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px; font-weight: bold;}
+.input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px;
+ font-weight: bold; }
 .input-groupA input{ border-right:none; }
 
 .custom-file-upload-hidden {
