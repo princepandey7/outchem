@@ -2,7 +2,7 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 
-body{font-family: 'Questrial', sans-serif;}
+body{font-family: 'Questrial', sans-serif;color: #9d9d9d;}
 
 h3{
 font-size:22px;
@@ -12,7 +12,7 @@ a{ color: #454545 }
 a:hover{ text-decoration: none; }
 .noborder{ border: none; }
 
-.wrapperHead{ padding:8px 0px; background:#51b821;}
+.wrapperHead{ padding:8px 0px; background:#255b1b; color: #ffffff}
 .wrapper{background:#51b821;}
 .wrapperContent{width:100%;  }
 .padding-tb10{padding:10px 0px;}
@@ -61,7 +61,7 @@ a:hover{ text-decoration: none; }
 .border-left{border-style:solid ; border-left:solid 4px #51b821; }
 
 .buyerProfile ul li{float: left; list-style: none; margin-right: 30px  }
-.buyerProfile .panel{ margin-bottom: 30px }
+.buyerProfile{ padding-bottom: 30px }
 .buyerProfile .profilePic img{ width: 30%; float: right; }
 .buyerProfile .flag { width: 25px; height: auto; margin-right: 10px; }
 
@@ -226,3 +226,8 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 .categoriesDetail label{ line-height: 27px; color: #555555; }
 
 .fullWidthImg{ width: 100%!important; height:auto;}
+.howitworks{ text-align: center; color: #ffffff; margin-top: 32px; }
+
+.progress-bar canvas{ height: 11px; }
+.input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px; font-weight: bold;}
+.input-groupA input{ border-right:none; }
