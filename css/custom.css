@@ -13,7 +13,7 @@ a:hover{ text-decoration: none; }
 .noborder{ border: none; }
 
 .wrapperHead{ padding:8px 0px; background:#255b1b; color: #ffffff}
-.wrapper{background:#51b821;}
+.wrapper{background:#255b1b;}
 .wrapperContent{width:100%;  }
 .padding-tb10{padding:10px 0px;}
 .padding-tb20{padding:20px 0px;}
@@ -226,8 +226,70 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 .categoriesDetail label{ line-height: 27px; color: #555555; }
 
 .fullWidthImg{ width: 100%!important; height:auto;}
-.howitworks{ text-align: center; color: #ffffff; margin-top: 32px; }
+.howitworks{ text-align: center; color: #ffffff; margin-top: 20px; }
 
 .progress-bar canvas{ height: 11px; }
+.input-groupA{ margin-right: -16px; }
 .input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px; font-weight: bold;}
 .input-groupA input{ border-right:none; }
+
+.custom-file-upload-hidden {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+}
+.custom-file-upload {
+    display: block;
+    width: auto;
+    font-size: 16px;
+    margin-top: 0px;
+    //border: 1px solid #ccc;
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.file-upload-wrapper {
+    position: relative; 
+    margin-bottom: 5px;
+    //border: 1px solid #ccc;
+}
+.file-upload-input {
+    width:100%;
+    color: #9d9d9d;
+    font-size: 16px;
+    padding: 6px 8px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: $file-upload-color; 
+    @include transition(all 0.2s ease-in); 
+    float: left; /* IE 9 Fix */
+    &:hover, &:focus { 
+        background-color: darken($file-upload-color, 5);
+        outline: none; 
+    }
+}
+.file-upload-button {
+    cursor: pointer; 
+    display: inline-block; 
+    color: #51b821;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    font-weight: bold; 
+    border: none;
+    margin-left: -1px;  
+    background-color:transparent; 
+    float: right; /* IE 9 Fix */
+    position: absolute;
+    right: 0;
+    top: -8px;
+    @include transition(all 0.2s ease-in);
+    &:hover {
+        background-color: darken($file-upload-color, 20);
+    }
+}
+.loginLink{ color: #ffffff; margin-top: 20px; }
+.loginLink a{ color: #ffffff!important; margin:0px 15px; font-size: 16px;  }
