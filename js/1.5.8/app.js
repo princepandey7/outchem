@@ -94,19 +94,19 @@ app.controller('appController', ['$scope', function ($scope) {
         $scope.hoverRating1 = param + '*';
     };
 
-    $scope.click2 = function (param) {
-        console.log('Click');
-    };
+    // $scope.click2 = function (param) {
+    //     console.log('Click');
+    // };
 
-    $scope.mouseHover2 = function (param) {
-        console.log('mouseHover(' + param + ')');
-        $scope.hoverRating1 = param;
-    };
+    // $scope.mouseHover2 = function (param) {
+    //     console.log('mouseHover(' + param + ')');
+    //     $scope.hoverRating1 = param;
+    // };
 
-    $scope.mouseLeave2 = function (param) {
-        console.log('mouseLeave(' + param + ')');
-        $scope.hoverRating2 = param + '*';
-    };
+    // $scope.mouseLeave2 = function (param) {
+    //     console.log('mouseLeave(' + param + ')');
+    //     $scope.hoverRating2 = param + '*';
+    // };
 
     $scope.click3 = function (param) {
         console.log('Click');
