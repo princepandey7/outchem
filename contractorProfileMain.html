@@ -1,17 +1,17 @@
-<div class="container">	
+<div class="container" ng-controller="AdminCtrl">	
 	<div class="row padding-tb50">
     	<div class="row">
     		<div class="col-lg-10 buyerProfile">
             	<div class="">
 	        		<ul>
 	        			<li class="profilePic">
-	        				<img src="../images/img_avatar.png" class="img-circle profile-img"/>
+	        				<img src="images/img_avatar.png" class="img-circle profile-img"/>
 	        			</li>
 	        			<li>
 	        				<h3>James Cadmen</h3>
 							<p>dummyemail@hotmail.com</p>
 							<p>+1-613-555-01366</p>
-							<p><img src="../images/canada.png" class="img-circle flag" /> Canada</p>
+							<p><img src="images/canada.png" class="img-circle flag" /> Canada</p>
 							<div class="progress-bar"></div>
 	        			</li>
 	        		</ul>
@@ -23,13 +23,13 @@
 			<div class="col-sm-6 col-sm-offset-3">
 				<ul class="nav nav-pills nav-justified contractoNav">
 					<li ng-class="{ active: isSet(1) }">
-						<a href ng-click="setTab(1)">Company Details</a>
+						<a href="#/contractorProfile" ng-click="setTab(1)">Company Details</a>
 					</li>
 					<li ng-class="{ active: isSet(2) }">
-						<a href ng-click="setTab(2)">Categories</a>
+						<a href="#/contractorProfile" ng-click="setTab(2)">Categories</a>
 					</li>
 					<li ng-class="{ active: isSet(3) }">
-						<a href ng-click="setTab(3)">Listing Package</a>
+						<a href="#/contractorProfile" ng-click="setTab(3)">Listing Package</a>
 					</li>
 				</ul>
 			</div>

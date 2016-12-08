@@ -9,43 +9,33 @@
 <script src="js/1.5.8/app.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/canvasjs.min.js"></script>
+<script src="js/gradient-progress-bar.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/customjquerysctipttop.css" >
+
+<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
 
 </head>
 
-<body ng-app="outChem">
-<nav class="navbar navbar-default wrapperHead">
-      <div class="container" >
-        <div class="navbar-header">
-            <div class="row">
-                <img style="align:center; padding-left:-100px; padding-right:-40%; max-width:333px;" src="images/outchem logo final white.png" class="img-responsive">
-		    </div>
-        </div>
-        <!-- <p  class="howitworks">How it works</p> -->
-      </div>
-</nav>
+<body ng-app="outChem" ng-controller="MainCtrl" >
+<div ng-include="pageCtx.headerUrl"></div>
+
 <div class="wrapperContent">
-	<div class="container">
-	
-    	<div class="row padding-tb50">
-        	<div class="col-lg-12">
-            	<div class="col-lg-4"></div>
+  <div class="container">
+  
+      <div class="row padding-tb50">
+          <div class="col-lg-12">
+              <div class="col-lg-4"></div>
                 <div ng-view></div>
                 <div class="col-lg-4"></div>
             </div>
         </div>
     </div>
 </div>
-<nav class="navbar navbar-default navbar-fixed-bottom wrapper" role="navigation">
-  <div class="container padding-tb10">
-	<div class="row text-center">
-		<p align="center" class="font18" style="color:#fff; margin-top:12px;">Don't have an account yet? <a align="center" href="#register" style="color:#fff;">Register Here</a></p>
-	<div>
-  </div>
-</nav>
+<div ng-include="pageCtx.footerUrl"></div>\
 </body>
 </html>

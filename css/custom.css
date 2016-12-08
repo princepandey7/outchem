@@ -317,5 +317,36 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
     color: #454545;
     font-size: 12px;
 }
-.package-edit-icon{background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
+.package-edit-icon{background-image:url('images/edit2.png'); display: block;width: 20px; height: 20px}
 
+/*
+.logo-img {
+    float: right;
+    margin-top:-30%;
+    margin-left:10%;
+    height:70px;
+    width:70px;
+    position:absolute;
+    display: inline-block;
+    
+}
+#greet{
+     float: right;
+     color:#fff;
+     width:-10%;
+     margin-top:-3.5%;
+     margin-left:70%;
+     position:absolute;
+     display: inline-block; 
+    
+}
+.profile-img{
+    width:135px;
+    height:135px;
+    display: inline-block;  
+    
+}
+.flag{
+    width:20px;
+    height:20px;
+}*/
