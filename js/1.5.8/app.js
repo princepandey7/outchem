@@ -98,7 +98,7 @@ app.run(['$rootScope','$location', '$routeParams', function($rootScope, $locatio
     });
 }]);
 
-app.controller('TabController1', ['$scope', function($scope) {
+app.controller('Tab1Controller', ['$scope', function($scope) {
     $scope.tab = 1;
     $scope.setTab = function(newTab){
       $scope.tab = newTab;
