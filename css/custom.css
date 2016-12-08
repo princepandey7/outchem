@@ -11,7 +11,8 @@ font-family: 'Questrial', sans-serif;
 a{ color: #454545 }
 a:hover{ text-decoration: none; }
 .noborder{ border: none; }
-
+.pl0{ padding-left: 0px!important;}
+.pr0{ padding-right: 0px!important; }
 .wrapperHead{ padding:8px 0px; background:#255b1b; color: #ffffff; border-radius:0px; }
 .wrapper{background:#255b1b;}
 .wrapperContent{width:100%;  }
@@ -237,6 +238,9 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
  font-weight: bold; }
 .input-groupA input{ border-right:none; }
 
+.adminprofile label{ color: #51b821; font-size: 20px; }
+.adminprofile .row{ margin-top: 30px; }
+
 .custom-file-upload-hidden {
     display: none;
     visibility: hidden;
@@ -298,7 +302,8 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 .loginLink{ color: #ffffff; margin-top: 20px; }
 .loginLink a{ color: #ffffff!important; margin:0px 15px; font-size: 16px;  }
 
-.input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px; font-weight: bold;}
+.input-groupA .input-group-addon{ background:transparent; color: #51b821; font-size: 19px;
+ font-weight: bold; cursor: pointer;}
 .input-groupA input{ border-right:none; }
 .packageDetailsBox h5{color: #51b821; font-size: 20px; font-weight: bold; }
 .packageSummaryTable{border: 1px solid #acacac}
@@ -313,3 +318,4 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
     font-size: 12px;
 }
 .package-edit-icon{background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
+

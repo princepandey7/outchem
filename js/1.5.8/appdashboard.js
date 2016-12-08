@@ -49,6 +49,16 @@ app.controller('TabController', ['$scope', function($scope) {
     };
 }]);
 
+app.controller('Tab1Controller', ['$scope', function($scope) {
+    $scope.tab = 1;
+    $scope.setTab = function(newTab){
+      $scope.tab = newTab;
+    };
+    $scope.isSet = function(tabNum){
+      return $scope.tab === tabNum;
+    };
+}]);
+
 app.controller('topKeywordsController', function($scope){
     $scope.topKeywords = {
        keywords:[
