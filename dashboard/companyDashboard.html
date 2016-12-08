@@ -1,0 +1,206 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#companyDashboard">Dashboard</a></li>
+    <li><a href="#companyDashboard">Profile</a></li>
+</ul>
+<div class="row">
+    <div class="col-md-8">
+        <div class="col-md-12 greyBackground padding-tb0">
+            <div class="whiteBackground company-review-box">
+                <h2> Trending Keyword< varsha/h2>
+                <div class="tending-chart-box">
+                    <script type="text/javascript">
+                      window.onload = function () {
+                        var chart = new CanvasJS.Chart("chartContainer",
+                        {
+                          title:{
+                            text: "Gold Won in Olympics"             
+                          }, 
+                          animationEnabled: true,     
+                          axisY:{
+                            titleFontFamily: "arial",
+                            titleFontSize: 12,
+                            includeZero: false
+                          },
+                          toolTip: {
+                            shared: true
+                          },
+                          data: [
+                          {        
+                            type: "spline",  
+                            name: "US",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 44} ,     
+                            {label:"Sydney 2000", y: 37} ,     
+                            {label: "Athens 2004", y: 34} ,     
+                            {label: "Beijing 2008", y: 36} ,     
+                            {label: "London 2012", y: 46}              
+                            ]
+                          }, 
+                          {        
+                            type: "spline",  
+                            name: "China",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 16} ,     
+                            {label:"Sydney 2000", y: 28} ,     
+                            {label: "Athens 2004", y: 32} ,     
+                            {label: "Beijing 2008", y: 51} ,     
+                            {label: "London 2012", y: 38}              
+                            ]
+                          },
+                          {        
+                            type: "spline",  
+                            name: "Britain",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 1} ,     
+                            {label:"Sydney 2000", y: 11} ,     
+                            {label: "Athens 2004", y: 9} ,     
+                            {label: "Beijing 2008", y: 19} ,     
+                            {label: "London 2012", y: 29}              
+                            ]
+                          },
+                          {        
+                            type: "spline",  
+                            name: "Russia",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 26} ,     
+                            {label:"Sydney 2000", y: 32} ,     
+                            {label: "Athens 2004", y: 28} ,     
+                            {label: "Beijing 2008", y: 23} ,     
+                            {label: "London 2012", y: 24}              
+                            ]
+                          },
+                          {        
+                            type: "spline",  
+                            name: "S Korea",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 7} ,     
+                            {label:"Sydney 2000", y: 8} ,     
+                            {label: "Athens 2004", y: 9} ,     
+                            {label: "Beijing 2008", y: 13} ,     
+                            {label: "London 2012", y: 13}              
+                            ]
+                          },  
+                          {        
+                            type: "spline",  
+                            name: "Germany",        
+                            showInLegend: true,
+                            dataPoints: [
+                            {label: "Atlanta 1996" , y: 20} ,     
+                            {label:"Sydney 2000", y: 13} ,     
+                            {label: "Athens 2004", y: 13} ,     
+                            {label: "Beijing 2008", y: 16} ,     
+                            {label: "London 2012", y: 11}              
+                            ]
+                          }      
+                          ],
+                          legend:{
+                            cursor:"pointer",
+                            itemclick:function(e){
+                              if(typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                e.dataSeries.visible = false;
+                              }
+                              else {
+                                e.dataSeries.visible = true;            
+                              }
+                              chart.render();
+                            }
+                          }
+                        });
+
+                    chart.render();
+                    }
+                    </script>
+                    <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            
+        </div>
+    </div>
+
+    <div class="col-md-4 greyBackground padding-tb0">
+        <div class="whiteBackground company-review-box">
+            <h2> Company Reviews</h2>
+            <ul class="company-list-section">
+                <li>
+                    <div class="col-md-12 padding-tb0">
+                        <div class="col-md-3 padding-tb0">
+                            <img src="../images/img1.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-9 padding-tb0 company-section-box">
+                            <h3>Company Name 1<span>4.5</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus imperdiet, luctus ligula non, tempus tortor.</p> 
+                            <a href="#companyDashboard">Read full review</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-12 padding-tb0">
+                        <div class="col-md-3 padding-tb0">
+                            <img src="../images/img2.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-9 padding-tb0 company-section-box">
+                            <h3>Company Name2 <span>4.5</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus imperdiet, luctus ligula non, tempus tortor.</p> 
+                            <a href="#companyDashboard">Read full review</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12 greyBackground padding-tb0" style="margin: 10px 0px    ">
+        <div class="col-md-12 whiteBackground company-review-box">
+            <div class="col-md-4">
+                <div id="chartContainer1" style="height: 200px; width: 100%;"></div>
+                <script type="text/javascript">
+                window.onload = function () {
+                    var chart = new CanvasJS.Chart("chartContainer1",
+                    {
+                        title:{
+                            text: "Pie Chart"
+                        },
+                        data: [
+                        {
+                            type: "doughnut",
+                            dataPoints: [
+                                { y: 4181563},
+                                { y: 2175498},
+                                { y: 3125844},
+                                { y: 1176121},
+                                { y: 1727161},
+                                { y: 4303364},
+                                { y: 1717786}
+                            ]
+                        }
+                        ]
+                    });
+                    chart.render();
+                }
+                </script>
+            </div>
+            <div class="col-md-8">
+                
+            </div>
+        </div>
+    </div>
+</div>
