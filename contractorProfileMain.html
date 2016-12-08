@@ -1,4 +1,4 @@
-<div class="container" ng-controller="AdminCtrl">	
+<div class="container" ng-controller="ProfilerCtrl">	
 	<div class="row padding-tb50">
     	<div class="row">
     		<div class="col-lg-10 buyerProfile">
@@ -11,7 +11,7 @@
 	        				<h3>James Cadmen</h3>
 							<p>dummyemail@hotmail.com</p>
 							<p>+1-613-555-01366</p>
-							<p><img src="images/canada.png" class="img-circle flag" /> Canada</p>
+							<p><img src="images/india-icon.png" class="img-circle flag" /> India</p>
 							<div class="progress-bar"></div>
 	        			</li>
 	        		</ul>
@@ -52,7 +52,21 @@
 							    <!--<label for="file">File: </label>--> 
 							    <input type="file" id="file" name="myfiles[]" multiple />
 							</div>
-					
+							
+							<div class="form-group">
+								<textarea class="form-control" rows="3" id="" placeholder="Write Review"></textarea>
+							</div>
+							
+							
+
+
+    <input id="input-2ba" type="number" class="rating" min="0" max="5" step="0.5" data-stars=5
+    data-symbol="&#xe005;" data-default-caption="{rating} hearts" data-star-captions="{}">
+   
+
+
+
+
 							<div class="form-group  text-right">
 								<button class="loginBtn">Submit &nbsp; &#x276f;</button>
 							</div>
@@ -118,19 +132,19 @@
 			            </div>
 			            <div class="form-group col-sm-12">
 			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Package </option>
+			            		<option selected="selected">Select Package </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
 			               <div class="form-group col-sm-12" >
 			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Days </option>
+			            		<option selected="selected">Select Days </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
 			               <div class="form-group col-sm-12" >
 			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Location </option>
+			            		<option selected="selected">Select Location </option>
 			            		<option> Bodies</option>
 			            	</select>
 			            </div>
@@ -315,4 +329,57 @@ $('input[type=file]').customFile();
                   gradient: ["red", "yellow", "green"]
               }
           });
+</script>
+
+<script>
+    jQuery(document).ready(function () {
+        $("#input-21f").rating({
+            starCaptions: function(val) {
+                if (val < 3) {
+                    return val;
+                } else {
+                    return 'high';
+                }
+            },
+            starCaptionClasses: function(val) {
+                if (val < 3) {
+                    return 'label label-danger';
+                } else {
+                    return 'label label-success';
+                }
+            },
+            hoverOnClear: false
+        });
+        
+        $('#rating-input').rating({
+              min: 0,
+              max: 5,
+              step: 1,
+              size: 'lg',
+              showClear: false
+           });
+           
+        $('#btn-rating-input').on('click', function() {
+            $('#rating-input').rating('refresh', {
+                showClear:true, 
+                disabled: !$('#rating-input').attr('disabled')
+            });
+        });
+        
+        
+        $('.btn-danger').on('click', function() {
+            $("#kartik").rating('destroy');
+        });
+        
+        $('.btn-success').on('click', function() {
+            $("#kartik").rating('create');
+        });
+        
+        $('#rating-input').on('rating.change', function() {
+            alert($('#rating-input').val());
+        });
+        
+        
+        $('.rb-rating').rating({'showCaption':true, 'stars':'3', 'min':'0', 'max':'3', 'step':'1', 'size':'xs', 'starCaptions': {0:'status:nix', 1:'status:wackelt', 2:'status:geht', 3:'status:laeuft'}});
+    });
 </script>
