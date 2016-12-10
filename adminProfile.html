@@ -1,5 +1,5 @@
 <div ng-controller="AdminCtrl">
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs nav-justified col-sm-8 dashprof" >
     <li><a href="#adminDashboard">Dashboard</a></li>
     <li class="active"><a href="#adminProfile">Profile</a></li>
 </ul>
@@ -16,9 +16,9 @@
 					<li ng-class="{ active: isSet(3) }">
 						<a href="#/adminProfile" ng-click="setTab(3)">User Management</a>
 					</li>
-					<li ng-class="{ active: isSet(4) }">
+					<!-- <li ng-class="{ active: isSet(4) }">
 						<a href="#/adminProfile" ng-click="setTab(4)">Prising</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<div class="col-md-8 col-sm-offset-2 adminprofile">
@@ -86,7 +86,7 @@
 				</div>
 				<div ng-show="isSet(2)">
 					<div style="clear:both; height:30px;"></div>
-					<div class="col-sm-6">
+					<div class="col-sm-6 col-sm-offset-3">
 			            <div class="form-group col-sm-8 padding0" style="line-height:32px">
 			            	<label>Uncategorised Keyword</label>
 			            </div>
@@ -116,11 +116,16 @@
 						</div>
 					</div>
 					<div class="col-sm-12">
-						 <div class="form-group col-sm-8 padding0" style="line-height:32px">
-			            	<label>Uncategorised Keyword</label>
+						 <div class="form-group col-sm-5 padding0" style="line-height:32px">
+			            	<label> Categorised Keyword </label>
 			            </div>
 			            <div class="form-group col-sm-4 pr0 margin0">
-			            	<button class="btn">Approve</button>
+			            	<input type="search" name="" class="form-control">
+			            </div>
+			            <div class="form-group col-sm-3 pr0 margin0">
+			            	<select class="form-control">
+			            		<option>30</option>
+			            	</select>
 			            </div>
 						<div class="top-keyword-box" ng-controller="packageSummaryController">
 							<table class="table table-bordered packageSummaryTable">
@@ -141,6 +146,9 @@
 										<td> </td>
 										<td>{{ packag.keyword }}</td>
 										<td>{{ packag.category }}</td>
+										<td>{{ packag.rank }}</td>
+										<td>{{ packag.count }}</td>
+										<td>{{ packag.price }}</td>
 										<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
 									</tr>
 								</tbody>
@@ -149,70 +157,51 @@
 					</div>
 				</div>
 				<div ng-show="isSet(3)">
-					<form class="form-horizotal formElement">
-					 	<div class="form-group col-sm-12">
-			            	<select class="form-control">
-			            		<option>Select Keyword </option>
-			            		<option>Regulatory Bodies</option>
-			            	</select>
-			            </div>
-			            <div class="form-group col-sm-12">
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Package </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			               <div class="form-group col-sm-12" >
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Days </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			               <div class="form-group col-sm-12" >
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Location </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			            <div class="form-group text-right">
-			            	<input class="loginBtn" type="button" value="Submit &nbsp; &#x276f;" disabled="disabled" />
-						</div>
-					</form>
-					<div class="row">
-						<div class="col-sm-12 packageDetailsBox">
-							<h5> Package Summary</h5>
-							<div class="col-md-12 padding-tb0">
-								<div class="top-keyword-box" ng-controller="packageSummaryController">
-									<table class="table table-bordered packageSummaryTable">
-										<thead>
-											<tr>
-												<th></th>
-												<th>Keywork</th>
-												<th>Package</th>
-												<th>Days</th>
-												<th>Location</th>
-												<th>< > </th>
-											</tr>
-										</thead>
-										<tbody>
-											<!-- 51b821  d8d8d8 -->
-											<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
-												<td> </td>
-												<td>{{ packag.package_name }}</td>
-												<td>{{ packag.package }}</td>
-												<td>{{ packag.days }}</td>
-												<td>{{ packag.location }}</td>
-												<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div style="clear:both; height:30px;"></div>
+					<div class="col-md-8 col-sm-offset-2 padding-tb0">
+				        <div class="whiteBackground user-management-box">
+				            <h2> User Management</h2>
+				            <ul class="company-list-section">
+				                <li>
+				                    <div class="col-md-12 padding-tb0">
+				                        <div class="col-md-3 padding-tb0">
+				                            <img src="images/img1.png" class="img-responsive" alt="">
+				                        </div>
+				                        <div class="col-md-9 padding-tb0 company-section-box">
+				                            <h3>Abby Toper</h3>
+				                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus imperdiet, luctus ligula non, tempus tortor.</p> 
+				                            
+				                        </div>
+				                    </div>
+				                </li>
+				                <li>
+				                    <div class="col-md-12 padding-tb0">
+				                        <div class="col-md-3 padding-tb0">
+				                            <img src="images/img2.png" class="img-responsive" alt="">
+				                        </div>
+				                        <div class="col-md-9 padding-tb0 company-section-box">
+				                            <h3>Abby Toper</h3>
+				                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus imperdiet, luctus ligula non, tempus tortor.</p> 
+				                           
+				                        </div>
+				                    </div>
+				                </li>
+				            </ul>
+				            <ul class="pagination">
+				                <li><a href="#">&laquo;</a></li>
+				                <li><a href="#">1</a></li>
+				                <li><a href="#">2</a></li>
+				                <li><a href="#">3</a></li>
+				                <li><a href="#">4</a></li>
+				                <li><a href="#">5</a></li>
+				                <li><a href="#">&raquo;</a></li>
+				            </ul>
+				        </div>
+				    </div>
+
 				</div>
-				<div ng-show="isSet(4)">
-				</div>
+				<!-- <div ng-show="isSet(4)">
+				</div> -->
 			</div>
     </div>
 </div>

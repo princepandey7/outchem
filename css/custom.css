@@ -320,3 +320,13 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
 .package-edit-icon{background-image:url('images/edit2.png'); display: block;width: 20px; height: 20px}
 .company-package-title h2{color: #454545; text-align: center; text-transform: capitalize; font-size: 22px; font-weight: bold;}
 
+.user-management-box h2{ background: #454545; color: #ffffff; text-transform: uppercase; font-weight: bold;
+font-size: 14px; padding: 8px 15px  }
+.user-management-box .pagination{ background: #51b821; 
+    padding: 15px; width: 100%;}
+.user-management-box .pagination>li>a, .user-management-box  .pagination>li>span{
+ background:#51b821; color: #ffffff; border: none;  }
+.user-management-box .pagination ul{ text-align:center;width:100%; margin:0 auto; }
+.user-management-box ul li{ display:inline ;padding:15px;}
+.dashprof{background:#f5f5f5;}
+.dashprof a{ color:#51b821; font-size:18px; font-weight: bold;}
