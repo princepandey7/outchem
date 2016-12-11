@@ -1,6 +1,20 @@
 <div class="container" ng-controller="AdminCtrl">
     	<div class="row padding-tb50">
         	<div class="col-lg-12 topPara">
+
+                <div class="search-div">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Normal...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </form>
+                </div>
+                <div class="clear0"></div>
+
+
                 <div class="intro">
                     <h1>INTRODUCING......</h1>
                     <h2>OUTCHEM.COM</h2>
@@ -19,17 +33,7 @@
                 <hr/>
             </div>
             <div class="clear0"></div>
-            <div class="search-div">
-                <form>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Normal...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                    </div><!-- /input-group -->
-                </form>
-            </div>
-            <div class="clear0"></div>
+            
             <div class="container carausolHome">
                 <!-- Indicators -->
                 <div class="servicesCalausol">
@@ -41,13 +45,13 @@
                                     <div>
                                         <h2>Product management</h2> 
                                         <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
                                         </p>
                                     </div>
                                     <div>
                                         <h2>Database Design &amp; build</h2> 
                                         <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has.
                                         </p>
                                     </div>
                                 </div>
@@ -55,13 +59,13 @@
                                     <div>
                                        <h2>Quality &amp; Metric Reporting</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established fact that a reader will be  distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                                        </p>
                                     </div>
                                     <div>
                                        <h2>Medicine &amp; Disease Coding</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a 
                                        </p>
                                    </div>   
                                 </div>
@@ -96,13 +100,13 @@
                                    <div>
                                        <h2>Product management</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                                        </p>
                                    </div>
                                     <div>
                                        <h2>Database Design &amp; build</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                                        </p>
                                    </div>
                                 </div>
@@ -110,13 +114,13 @@
                                     <div>
                                        <h2>Quality &amp; Metric Reporting</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a 
                                        </p>
                                     </div>
                                     <div>
                                        <h2>Medicine &amp; Disease Coding</h2> 
                                        <p style="color:#000">
-                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                           It is a long established  Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                                        </p>
                                    </div>   
                                </div>
@@ -178,7 +182,6 @@
 
         <div class="row homeContactSection" >
             <h1>Get in touch with us!</h1>
-
             <form class="form-horizontal" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
                 <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                    <input type="text" name="name" class="form-control" ng-model="user.name" required placeholder="Your Name">
