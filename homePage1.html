@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="AdminCtrl">
     	<div class="row padding-tb50">
         	<div class="col-lg-12 topPara">
                 <div class="intro">
@@ -175,5 +175,29 @@
                 
             </div>
         </div>
-</div>
 
+        <div class="row homeContactSection" >
+            <h1>Get in touch with us!</h1>
+
+            <form class="form-horizontal" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                   <input type="text" name="name" class="form-control" ng-model="user.name" required placeholder="Your Name">
+                    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Your Email ID">
+                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.comments.$invalid && !userForm.comments.$pristine }">
+                    <textarea name="comments" ng-model="user.comments" required class="form-control" rows="3" id="" placeholder="Your comments or queries"></textarea>
+                     <p ng-show="userForm.comments.$invalid && !userForm.comments.$pristine" class="help-block">Enter a comments or quiries.</p>
+                </div>
+
+                <div class="form-group  text-right">
+                    <!-- <button type="submit" class="loginBtn">Submit &nbsp; &#x276f;</button> -->
+                    <input type="submit"  class="loginBtn" value="Submit &nbsp; &#x276f;">
+                </div>
+            </form>
+        </div>
+</div>
