@@ -1,7 +1,6 @@
 var app = angular.module("outChem", ['ngRoute']);
 
 app.provider('myPageCtx', function() {
-  
   var defaultCtx = {
     title: 'Default Title',
     headerUrl: 'default-header.html',
@@ -23,9 +22,36 @@ app.controller('MainCtrl', function($scope, myPageCtx) {
   $scope.pageCtx = myPageCtx;
 });
 
-app.controller('AdminCtrl', function($scope, myPageCtx) {
+app.controller('AdminCtrl', function($scope, myPageCtx, $http) {
   myPageCtx.headerUrl = 'admin-header.html';
   myPageCtx.footerUrl = 'admin-footer.html';
+
+  $scope.person1 = {};
+  $scope.person2 = {};
+  $scope.person3 = {};
+
+  $scope.submitData = function (person, resultVarName)
+  {
+    var config = {
+      params: {
+        person: person
+      }
+    };
+
+    console.log(person);
+
+
+    $http.post("http://staging.outchem.com/api/v1/contactus", null, config)
+      .then(function (data, status, headers, config)
+      {
+        console.log(data);
+        // $scope[resultVarName] = data;
+      })
+      .catch(function (data, status, headers, config)
+      {
+        $scope[resultVarName] = "SUBMIT ERROR";
+      });
+  };
 });
 
 app.controller('ProfilerCtrl', function($scope, myPageCtx) {
@@ -38,10 +64,10 @@ app.config(['$routeProvider',function($routeProvider) {
    when('/register', {
         templateUrl : 'signupOpt.html'
     }).
-	 when('/buyerRegistration', {
+   when('/buyerRegistration', {
         templateUrl : 'buyerRegistration.html'
     }).
-	when('/contrctrRegister', {
+  when('/contrctrRegister', {
         templateUrl : 'contrctrRegister.html'
     }).
 
@@ -69,8 +95,8 @@ app.config(['$routeProvider',function($routeProvider) {
 
 
     otherwise({
-		templateUrl: 'login.html'
-	});
+    templateUrl: 'login.html'
+  });
 }]);
 
 app.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {

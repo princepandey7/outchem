@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/1.5.8/angular.min.js"></script> 
+  <script src="script.js"></script>
+  <style>
+    label
+    {
+      display: inline-block;
+      width: 120px;
+      vertical-align: middle;
+    }
+
+    input
+    {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    input.ng-invalid
+    {
+      border: solid red 2px;
+    }
+
+    textarea
+    {
+      width: 300px;
+      height: 80px;
+    }
+  </style>
+</head>
+
+<body ng-app="mainModule">
+  <div ng-controller="mainController">
+    <h3>1. Standard form submission</h3>
+    <form name="personForm1" action="server.php" method="post" novalidate>
+      <label for="firstNameEdit1">First name:</label>
+      <input id="firstNameEdit1" type="text" name="firstName" ng-model="person1.firstName" required /><br />
+      <label for="lastNameEdit1">Last name:</label>
+      <input id="lastNameEdit1" type="text" name="lastName" ng-model="person1.lastName" required /><br />
+      <br />
+      <button type="submit"
+              ng-disabled="personForm1.$invalid">Submit</button>
+    </form>
+    <br />
+    <h3>2. AJAX form submission with ng-submit</h3>
+    <form name="personForm2" ng-submit="submitData(person2, 'ajaxSubmitResult1')" novalidate>
+      <label for="firstNameEdit2">First name:</label>
+      <input id="firstNameEdit2" type="text" name="firstName" ng-model="person2.firstName" required /><br />
+      <label for="lastNameEdit2">Last name:</label>
+      <input id="lastNameEdit2" type="text" name="lastName" ng-model="person2.lastName" required /><br />
+      <br />
+      <button type="submit"
+              ng-disabled="personForm2.$invalid">Submit</button>
+    </form>
+    <br />
+    <strong><label for="submitDebugText1">Submit result:</label></strong><br />
+    <textarea id="submitDebugText1">{{ajaxSubmitResult1 | json}}</textarea><br />
+    <br />
+    <h3>3. AJAX form submission with ng-click</h3>
+    <form name="personForm3" novalidate>
+      <label for="firstNameEdit3">First name:</label>
+      <input id="firstNameEdit3" type="text" name="firstName" ng-model="person3.firstName" required /><br />
+      <label for="lastNameEdit3">Last name:</label>
+      <input id="lastNameEdit3" type="text" name="lastName" ng-model="person3.lastName" required /><br />
+      <br />
+      <button type="submit"
+              ng-click="submitData(person3, 'ajaxSubmitResult2')"
+              ng-disabled="personForm3.$invalid">Submit</button>
+    </form>
+    <br />
+    <strong><label for="submitDebugText2">Submit result:</label></strong><br />
+    <textarea id="submitDebugText2">{{ajaxSubmitResult2 | json}}</textarea>
+  </div>
+</body>
+</html>
+
+      <!--   <form class="form-horizontal" method="post" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                
+                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                   <input type="text" name="name" class="form-control" ng-model="user.name" required placeholder="Your Name">
+                    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+                </div>
+                
+                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Your Email ID">
+                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+
+                </div>
+                
+                <div class="form-group" ng-class="{ 'has-error' : userForm.comments.$invalid && !userForm.comments.$pristine }">
+                    <textarea name="comments" ng-model="user.comments" required class="form-control" rows="3" id="" placeholder="Your comments or queries"></textarea>
+                     <p ng-show="userForm.comments.$invalid && !userForm.comments.$pristine" class="help-block">Enter a comments or quiries.</p>
+                </div>
+
+                <div class="form-group  text-right">
+                    <button type="submit" class="loginBtn">Submit &nbsp; &#x276f;</button>
+                </div>
+            </form>
+ -->
