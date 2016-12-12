@@ -102,7 +102,6 @@ app.config(['$routeProvider',function($routeProvider) {
 
 
 
-
 app.controller('appController', ['$scope', function ($scope) {
     $scope.starRating1 = 4;
     $scope.starRating2 = 5;
@@ -431,4 +430,31 @@ app.factory("CustomerService", ['$filter', function($filter){
   return service;
   
   
+}]);
+
+
+
+
+
+app.controller('buyerProfileController', ['$scope','CustomerService', function($scope, CustomerService) {
+  $scope.submitBuyerData = function (person, resultVarName, $http)
+  {
+    var config = {
+      params: {
+        person: person
+      }
+    };
+    console.log(person);
+    $http.post("http://staging.outchem.com/api/v1/buyerinformation", null, config)
+      .then(function (data, status, headers, config)
+      {
+        console.log(data);
+        // $scope[resultVarName] = data;
+      })
+      .catch(function (data, status, headers, config)
+      {
+        $scope[resultVarName] = "SUBMIT ERROR";
+      });
+  };
+ 
 }]);
