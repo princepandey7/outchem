@@ -69,7 +69,9 @@
             <div class="row">
             	<div class="col-lg-8">
     			<label>
-    				<input type="checkbox" name="chk"  /><span>Terms & Conditions*</span>
+    				<input type="checkbox" name="checkAgree" ng-model="checkAgree" /><span>Terms & Conditions*</span>
+                     <p ng-show="signupForm.checkAgree.$error.required && !signupForm.checkAgree.$pristine" class="help-block">You must agree to our terms and Conditions.</p>
+                     
     			</label>
                 
             		
