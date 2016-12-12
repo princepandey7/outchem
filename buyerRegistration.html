@@ -6,28 +6,28 @@
             <div class="row">
                 <div class="col-lg-6" ng-class="{ 'has-error' : userBuyerForm.firstName.$invalid && !userBuyerForm.firstName.$pristine }">
                     <input id="fname" type="text" class="form-control" placeholder="First Name*" name="firstName" ng-model="user.firstName" required />
-                    <p ng-show="userBuyerForm.firstName.$invalid && !userBuyerForm.firstName.$pristine" class="help-block">You first name is required.</p>
+                    <p  style="color:red" ng-show="userBuyerForm.firstName.$invalid && !userBuyerForm.firstName.$pristine" class="help-block">You first name is required.</p>
                 </div>
 
                 <div class="col-lg-6" ng-class="{ 'has-error' : userBuyerForm.lastName.$invalid && !userBuyerForm.lastName.$pristine }">
                     <input id="lname" type="text" class="form-control" placeholder="Last Name*" name="lastName" ng-model="user.lastName" required />
-                    <p ng-show="userBuyerForm.lastName.$invalid && !userBuyerForm.lastName.$pristine" class="help-block">You last name is required.</p>
+                    <p  style="color:red" ng-show="userBuyerForm.lastName.$invalid && !userBuyerForm.lastName.$pristine" class="help-block">You last name is required.</p>
                 </div>
             </div>
             <br />
             <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.email.$invalid && !userBuyerForm.email.$pristine }">
                <input id="fullEmail" type="email" class="form-control" placeholder="Email ID" name="email" ng-model="user.email" required />
-                <p ng-show="userBuyerForm.email.$invalid && !userBuyerForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                <p  style="color:red" ng-show="userBuyerForm.email.$invalid && !userBuyerForm.email.$pristine" class="help-block">Enter a valid email.</p>
             </div>
 
             <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.password.$invalid && !userBuyerForm.password.$pristine }">
                <input id="fullPassword" type="password" class="form-control" placeholder="Password*" name="password" ng-model="user.password" required />
-                <p ng-show="userBuyerForm.password.$invalid && !userBuyerForm.password.$pristine" class="help-block">Enter a valid Password.</p>
+                <p  style="color:red" ng-show="userBuyerForm.password.$invalid && !userBuyerForm.password.$pristine" class="help-block">Enter a valid Password.</p>
             </div>
 
             <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.phone.$invalid && !userBuyerForm.phone.$pristine }">
                <input id="fullPhone" type="text" class="form-control" placeholder="Phone number*" name="phone" ng-model="user.phone" required />
-                <p ng-show="userBuyerForm.phone.$invalid && !userBuyerForm.phone.$pristine" class="help-block">Enter a valid Phone Number.</p>
+                <p  style="color:red" ng-show="userBuyerForm.phone.$invalid && !userBuyerForm.phone.$pristine" class="help-block">Enter a valid Phone Number.</p>
             </div>
 
 
@@ -54,7 +54,7 @@
                         <option value="">State*</option>
                     </select>
                 </div>
-
+                <br/> <br/>
                 <div class="col-lg-6">
                     <select ng-model="customer.City"
                 ng-options="x.Id as x.city for x in cities"
