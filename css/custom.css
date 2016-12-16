@@ -60,10 +60,11 @@ a:hover{ text-decoration: none; }
 .loginBtn:active{background-color:#51b821; box-shadow:0 2px #397f18; transform: translateY(4px);}
 .border-left{border-style:solid ; border-left:solid 4px #51b821; }
 
-.buyerProfile ul li{float: left; list-style: none; margin-right: 30px  }
+.buyerProfile ul li{float: left; list-style: none;}
 .buyerProfile{ padding-bottom: 30px }
-.buyerProfile .profilePic img{ width: 30%; float: right; }
+.buyerProfile .profilePic img{ width: 60%; float: right; }
 .buyerProfile .flag { width: 25px; height: auto; margin-right: 10px; }
+.contractorProfile{ max-width: 700px; }
 
 input[name='radio']+span{
 	font-family: 'Questrial', sans-serif;

@@ -1,13 +1,13 @@
-<div class="container" ng-controller="ProfilerCtrl">	
+<div class="container contractorProfile" ng-controller="ProfilerCtrl">	
 	<div class="row padding-tb50">
     	<div class="row">
-    		<div class="col-lg-10 buyerProfile">
+    		<div class="col-lg-10 col-sm-offset-1 buyerProfile">
             	<div class="">
 	        		<ul>
-	        			<li class="profilePic">
+	        			<li class="profilePic col-sm-6">
 	        				<img src="images/img_avatar.png" class="img-circle profile-img"/>
 	        			</li>
-	        			<li>
+	        			<li class="col-sm-6">
 	        				<h3>James Cadmen</h3>
 							<p>dummyemail@hotmail.com</p>
 							<p>+1-613-555-01366</p>
@@ -20,7 +20,7 @@
 			</div>
     	</div>
         <div class="row" ng-controller="TabController">
-			<div class="col-sm-6 col-sm-offset-3">
+			<div class="col-sm-12">
 				<ul class="nav nav-pills nav-justified contractoNav">
 					<li ng-class="{ active: isSet(1) }">
 						<a href ng-click="setTab(1)">Company Details</a>
@@ -33,7 +33,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-6 col-sm-offset-3">
+			<div class="col-sm-12">
 				<div ng-show="isSet(1)">
 					<div class="row formElement">
 						<form class="form-horizontal">
