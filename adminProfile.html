@@ -1,218 +1,222 @@
 <div ng-controller="AdminCtrl">
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs nav-justified col-sm-12 dashNav">
     <li><a href="#adminDashboard">Dashboard</a></li>
     <li class="active"><a href="#adminProfile">Profile</a></li>
 </ul>
-
- 	<div class="row" ng-controller="Tab1Controller" class="">
-			<div class="col-sm-8 col-sm-offset-2">
-				<ul class="nav nav-pills nav-justified contractoNav">
-					<li ng-class="{ active: isSet(1) }">
-						<a href="#/adminProfile" ng-click="setTab(1)">Create</a>
-					</li>
-					<li ng-class="{ active: isSet(2) }">
-						<a href="#/adminProfile" ng-click="setTab(2)">Categorization </a>
-					</li>
-					<li ng-class="{ active: isSet(3) }">
-						<a href="#/adminProfile" ng-click="setTab(3)">User Management</a>
-					</li>
-					<li ng-class="{ active: isSet(4) }">
-						<a href="#/adminProfile" ng-click="setTab(4)">Prising</a>
-					</li>
-				</ul>
+<div class="clear0"></div>
+<div class="row" ng-controller="Tab1Controller" class="">
+		<div class="tabsAdmin">
+			<ul class="nav nav-pills nav-justified contractoNav">
+				<li ng-class="{ active: isSet(1) }">
+					<a href="#/adminProfile" ng-click="setTab(1)">Create</a>
+				</li>
+				<li ng-class="{ active: isSet(2) }">
+					<a href="#/adminProfile" ng-click="setTab(2)">Categorization </a>
+				</li>
+				<li ng-class="{ active: isSet(3) }">
+					<a href="#/adminProfile" ng-click="setTab(3)">User Management</a>
+				</li>
+				<li ng-class="{ active: isSet(4) }">
+					<a href="#/adminProfile" ng-click="setTab(4)">Prising</a>
+				</li>
+			</ul>
+		</div>
+		<div class="adminprofile">
+			<div ng-show="isSet(1)">
+				<div class="row">
+					<div class="category">
+			        	<div class="form-group col-sm-6 padding0" style="line-height:32px">
+			            	<label>Create New Category</label>
+			            </div>
+			            <div class="form-group col-sm-6 padding0">
+			            	<div class="input-group input-groupA margin0">
+									<input type="text" class="form-control" placeholder="Type a category" aria-describedby="basic-addon2">
+									<span class="input-group-addon">&#43;</span>
+							</div>
+			            </div>
+			            <div class="form-group col-sm-12 padding0 margin0">
+			            		<textarea class="form-control" rows="8"></textarea>
+			            </div>
+			        </div>
+			        <div style="clear:both"></div>
+			        <div class="col-sm-6">
+			        	<div class="form-group col-sm-6 padding0" style="line-height:32px">
+			            	<label>Create New Keyword</label>
+			            </div>
+			            <div style="clear:both"></div>
+			            <div class="form-group col-sm-6 padding0 margin0">
+			            	<div class="input-group input-groupA">
+									<input type="text" class="form-control" placeholder="Type here" aria-describedby="basic-addon2">
+									<span class="input-group-addon">&#43;</span>
+							</div>
+			            </div>
+			            <div class="form-group col-sm-6 pr0 margin0">
+			            	<div class="input-group input-groupA">
+									<select class="form-control">
+										<option>Select Category</option>
+									</select>
+							</div>
+			            </div>
+			            <div class="form-group col-sm-12 padding0 margin0">
+			            	<textarea class="form-control" rows="8"></textarea>
+			            </div>
+			        </div>
+			         <div class="col-sm-6 ">
+			        	<div class="form-group col-sm-12 padding0" style="line-height:32px">
+			            	<label>Create New Listing Package</label>
+			            </div>
+			            <div style="clear:both"></div>
+			            <div class="form-group col-sm-6 pl0 margin0">
+			            	<div class="input-group input-groupA">
+									<input type="text" class="form-control" placeholder="Package Name" aria-describedby="basic-addon2">
+									<span class="input-group-addon">&#43;</span>
+							</div>
+			            </div>
+			            <div class="form-group col-sm-6 margin0">
+			            	<div class="input-group input-groupA">
+									<input type="text" class="form-control" placeholder="Add Days" aria-describedby="basic-addon2">
+									<span class="input-group-addon">&#43;</span>
+							</div>
+			            </div>
+			            <div class="form-group col-sm-12 padding0 margin0">
+			            		<textarea class="form-control" rows="8"></textarea>
+			            </div>
+			        </div>
+				</div>
 			</div>
-			<div class="col-md-8 col-sm-offset-2 adminprofile">
-				<div ng-show="isSet(1)">
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3">
-				        	<div class="form-group col-sm-6 padding0" style="line-height:32px">
-				            	<label>Create New Category</label>
-				            </div>
-				            <div class="form-group col-sm-6 padding0">
-				            	<div class="input-group input-groupA margin0">
-  									<input type="text" class="form-control" placeholder="Type a category" aria-describedby="basic-addon2">
-  									<span class="input-group-addon">&#43;</span>
-								</div>
-				            </div>
-				            <div class="form-group col-sm-12 padding0 margin0">
-				            		<textarea class="form-control" rows="8"></textarea>
-				            </div>
-				        </div>
-				        <div style="clear:both"></div>
-				        <div class="col-sm-6">
-				        	<div class="form-group col-sm-6 padding0" style="line-height:32px">
-				            	<label>Create New Keyword</label>
-				            </div>
-				            <div style="clear:both"></div>
-				            <div class="form-group col-sm-6 pl0 margin0">
-				            	<div class="input-group input-groupA">
-  									<input type="text" class="form-control" placeholder="Type here" aria-describedby="basic-addon2">
-  									<span class="input-group-addon">&#43;</span>
-								</div>
-				            </div>
-				            <div class="form-group col-sm-6 pr0 margin0">
-				            	<div class="input-group input-groupA">
-  									<select class="form-control">
-  										<option>Select Category</option>
-  									</select>
-								</div>
-				            </div>
-				            <div class="form-group col-sm-12 padding0 margin0">
-				            	<textarea class="form-control" rows="8"></textarea>
-				            </div>
-				        </div>
-				         <div class="col-sm-6 ">
-				        	<div class="form-group col-sm-12 padding0" style="line-height:32px">
-				            	<label>Create New Listing Package</label>
-				            </div>
-				            <div style="clear:both"></div>
-				            <div class="form-group col-sm-6 pl0 margin0">
-				            	<div class="input-group input-groupA">
-  									<input type="text" class="form-control" placeholder="Package Name" aria-describedby="basic-addon2">
-  									<span class="input-group-addon">&#43;</span>
-								</div>
-				            </div>
-				            <div class="form-group col-sm-6 margin0">
-				            	<div class="input-group input-groupA">
-  									<input type="text" class="form-control" placeholder="Add Days" aria-describedby="basic-addon2">
-  									<span class="input-group-addon">&#43;</span>
-								</div>
-				            </div>
-				            <div class="form-group col-sm-12 padding0 margin0">
-				            		<textarea class="form-control" rows="8"></textarea>
-				            </div>
-				        </div>
+			<div ng-show="isSet(2)">
+				<div style="clear:both; height:30px;"></div>
+				<div class="col-sm-6">
+		            <div class="form-group col-sm-8 padding0" style="line-height:32px">
+		            	<label>Uncategorised Keyword</label>
+		            </div>
+		            <div class="form-group col-sm-4 pr0 margin0">
+		            	<button class="btn">Approve</button>
+		            </div>
+					<div class="top-keyword-box" ng-controller="packageSummaryController">
+						<table class="table table-bordered packageSummaryTable">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Keywork</th>
+									<th>category</th>
+									<th>action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 51b821  d8d8d8 -->
+								<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
+									<td> </td>
+									<td>{{ packag.keyword }}</td>
+									<td>{{ packag.category }}</td>
+									<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<div ng-show="isSet(2)">
-					<div style="clear:both; height:30px;"></div>
-					<div class="col-sm-6">
-			            <div class="form-group col-sm-8 padding0" style="line-height:32px">
-			            	<label>Uncategorised Keyword</label>
-			            </div>
-			            <div class="form-group col-sm-4 pr0 margin0">
-			            	<button class="btn">Approve</button>
-			            </div>
-						<div class="top-keyword-box" ng-controller="packageSummaryController">
-							<table class="table table-bordered packageSummaryTable">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Keywork</th>
-										<th>category</th>
-										<th>action</th>
-									</tr>
-								</thead>
-								<tbody>
-									<!-- 51b821  d8d8d8 -->
-									<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
-										<td> </td>
-										<td>{{ packag.keyword }}</td>
-										<td>{{ packag.category }}</td>
-										<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="col-sm-12">
-						 <div class="form-group col-sm-8 padding0" style="line-height:32px">
-			            	<label>Uncategorised Keyword</label>
-			            </div>
-			            <div class="form-group col-sm-4 pr0 margin0">
-			            	<button class="btn">Approve</button>
-			            </div>
-						<div class="top-keyword-box" ng-controller="packageSummaryController">
-							<table class="table table-bordered packageSummaryTable">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Keywork</th>
-										<th>category</th>
-										<th>Rank</th>
-										<th>Count</th>
-										<th>Price</th>
-										<th>action</th>
-									</tr>
-								</thead>
-								<tbody>
-									<!-- 51b821  d8d8d8 -->
-									<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
-										<td> </td>
-										<td>{{ packag.keyword }}</td>
-										<td>{{ packag.category }}</td>
-										<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+				<div class="col-sm-12">
+					 <div class="form-group col-sm-8 padding0" style="line-height:32px">
+		            	<label>Uncategorised Keyword</label>
+		            </div>
+		            <div class="form-group col-sm-4 pr0 margin0">
+		            	<button class="btn">Approve</button>
+		            </div>
+					<div class="top-keyword-box" ng-controller="packageSummaryController">
+						<table class="table table-bordered packageSummaryTable">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Keywork</th>
+									<th>category</th>
+									<th>Rank</th>
+									<th>Count</th>
+									<th>Price</th>
+									<th>action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 51b821  d8d8d8 -->
+								<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
+									<td> </td>
+									<td>{{ packag.keyword }}</td>
+									<td>{{ packag.category }}</td>
+									<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<div ng-show="isSet(3)">
-					<form class="form-horizotal formElement">
-					 	<div class="form-group col-sm-12">
-			            	<select class="form-control">
-			            		<option>Select Keyword </option>
-			            		<option>Regulatory Bodies</option>
-			            	</select>
-			            </div>
-			            <div class="form-group col-sm-12">
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Package </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			               <div class="form-group col-sm-12" >
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Days </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			               <div class="form-group col-sm-12" >
-			            	<select class="form-control" disabled="disabled">
-			            		<option>Select Location </option>
-			            		<option> Bodies</option>
-			            	</select>
-			            </div>
-			            <div class="form-group text-right">
-			            	<input class="loginBtn" type="button" value="Submit &nbsp; &#x276f;" disabled="disabled" />
-						</div>
-					</form>
-					<div class="row">
-						<div class="col-sm-12 packageDetailsBox">
-							<h5> Package Summary</h5>
-							<div class="col-md-12 padding-tb0">
-								<div class="top-keyword-box" ng-controller="packageSummaryController">
-									<table class="table table-bordered packageSummaryTable">
-										<thead>
-											<tr>
-												<th></th>
-												<th>Keywork</th>
-												<th>Package</th>
-												<th>Days</th>
-												<th>Location</th>
-												<th>< > </th>
-											</tr>
-										</thead>
-										<tbody>
-											<!-- 51b821  d8d8d8 -->
-											<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
-												<td> </td>
-												<td>{{ packag.package_name }}</td>
-												<td>{{ packag.package }}</td>
-												<td>{{ packag.days }}</td>
-												<td>{{ packag.location }}</td>
-												<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+			</div>
+			<div ng-show="isSet(3)">
+				<form class="form-horizotal formElement">
+				 	<div class="form-group col-sm-12">
+		            	<input list="browsers" name="browser" class="form-control">
+						<datalist id="browsers">
+						    <option value="Internet Explorer">
+						    <option value="Firefox">
+						    <option value="Chrome">
+						    <option value="Opera">
+						    <option value="Safari">
+						</datalist>
+		            </div>
+		            <div class="form-group col-sm-12">
+		            	<select class="form-control" disabled="disabled">
+		            		<option>Select Package </option>
+		            		<option> Bodies</option>
+		            	</select>
+		            </div>
+		               <div class="form-group col-sm-12" >
+		            	<select class="form-control" disabled="disabled">
+		            		<option>Select Days </option>
+		            		<option> Bodies</option>
+		            	</select>
+		            </div>
+		               <div class="form-group col-sm-12" >
+		            	<select class="form-control" disabled="disabled">
+		            		<option>Select Location </option>
+		            		<option> Bodies</option>
+		            	</select>
+		            </div>
+		            <div class="form-group text-right">
+		            	<input class="loginBtn" type="button" value="Submit &nbsp; &#x276f;" disabled="disabled" />
+					</div>
+				</form>
+				<div class="row">
+					<div class="col-sm-12 packageDetailsBox">
+						<h5> Package Summary</h5>
+						<div class="col-md-12 padding-tb0">
+							<div class="top-keyword-box" ng-controller="packageSummaryController">
+								<table class="table table-bordered packageSummaryTable">
+									<thead>
+										<tr>
+											<th></th>
+											<th>Keywork</th>
+											<th>Package</th>
+											<th>Days</th>
+											<th>Location</th>
+											<th>< > </th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 51b821  d8d8d8 -->
+										<tr image-checkbox ng-style="{'background-color':(isSelected?'#d8d8d8':'')}" ng-repeat = "packag in packageSummary.packages" >
+											<td> </td>
+											<td>{{ packag.package_name }}</td>
+											<td>{{ packag.package }}</td>
+											<td>{{ packag.days }}</td>
+											<td>{{ packag.location }}</td>
+											<td> <a href="#" class="package-edit-icon"></a> | <a href="#" class="package-delete-icon"></a> </td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div ng-show="isSet(4)">
-				</div>
 			</div>
-    </div>
+			<div ng-show="isSet(4)">
+			</div>
+		</div>
+</div>
 </div>

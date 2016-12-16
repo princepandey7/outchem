@@ -343,3 +343,12 @@ font-size: 14px; padding: 8px 15px  }
 .tilesFour h1{ font-size: 26px!important }
 .tilesFour { color: #ffffff }
 .tilesFour .col-sm-6:hover{ background: #255b1b }
+
+.dashNav{ background: #69c140; border: 1px solid #69c140 }
+.adminprofile{ margin: 30px auto; max-width: 980px }
+.category { margin: 0 auto; max-width: 50%; }
+.tabsAdmin{ max-width: 980px; margin: 40px auto }
+.adminprofile .formElement { max-width: 700px;   margin: 0 auto}
+.rightTick{ position: absolute; right: -6px; top: 7px; }
+.propic { list-style: none; margin-top: 13px;}
+.propic  .dropdown-toggle{color: #ffffff }
