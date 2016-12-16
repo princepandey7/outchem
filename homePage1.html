@@ -33,6 +33,25 @@
                 <hr/>
             </div>
             <div class="clear0"></div>
+            <div class="col-sm-12 tilesFour">
+                    <div class="col-sm-3">
+                        <img class="img-center" src="images/sliderimage/icon-3.png">
+                        <h1>453</h1>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="img-center" src="images/sliderimage/icon-4.png">
+                        <h1>8976</h1>
+                    </div>
+                    <div class="col-sm-3">
+                         <img class="img-center" src="images/sliderimage/icon1.png">
+                        <h1>4560</h1>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="img-center" src="images/sliderimage/icon-4.png">
+                        <h1>231</h1>
+                    </div>
+                </div>
+            <div class="clear0"></div>
             
             <div class="container carausolHome">
                 <!-- Indicators -->
@@ -41,6 +60,36 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <h2>Product management</h2> 
+                                        <p style="color:#000">
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h2>Database Design &amp; build</h2> 
+                                        <p style="color:#000">
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div>
+                                       <h2>Quality &amp; Metric Reporting</h2> 
+                                       <p style="color:#000">
+                                           It is a long established fact that a reader will be  distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                                       </p>
+                                    </div>
+                                    <div>
+                                       <h2>Medicine &amp; Disease Coding</h2> 
+                                       <p style="color:#000">
+                                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a 
+                                       </p>
+                                   </div>   
+                                </div>
+                            </div>
+                            <div class="item">
                                 <div class="col-sm-6">
                                     <div>
                                         <h2>Product management</h2> 
@@ -173,25 +222,6 @@
                     <div class="clear0"></div>
                 </div>
                 <div class="clear0"></div>
-                <div class="col-sm-12 tilesFour">
-                    <div class="col-sm-6">
-                        <img class="img-center" src="images/sliderimage/icon-3.png">
-                        <h1>453</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-center" src="images/sliderimage/icon-4.png">
-                        <h1>8976</h1>
-                    </div>
-                    <div class="clear0"></div>
-                    <div class="col-sm-6">
-                         <img class="img-center" src="images/sliderimage/icon1.png">
-                        <h1>4560</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-center" src="images/sliderimage/icon-4.png">
-                        <h1>231</h1>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -201,6 +231,11 @@
                 <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                     <input id="fullName" type="text" class="form-control" placeholder="Your Name" name="name" ng-model="user.name" required />
                     <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+                </div>
+
+                 <div class="form-group" ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
+                   <input id="fullMobile" type="text" class="form-control" placeholder="Your Mobile Number" name="mobile" ng-model="user.mobile" required /><br />
+                    <p ng-show="userForm.mobile.$invalid && !userForm.mobile.$pristine" class="help-block">Enter a valid Mobile No.</p>
                 </div>
 
                 <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
