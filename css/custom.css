@@ -321,7 +321,8 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
     color: #454545;
     font-size: 12px;
 }
-.package-edit-icon{background-image:url('images/edit2.png'); display: block;width: 20px; height: 20px}
+.package-edit-icon{background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
+.package-delete-icon{background-image:url('../images/delete2.png'); display: block;width: 16px; height: 20px}
 .company-package-title h2{color: #454545; text-align: center; text-transform: capitalize; font-size: 22px; font-weight: bold;}
 
 .user-management-box h2{ background: #454545; color: #ffffff; text-transform: uppercase; font-weight: bold;
@@ -352,3 +353,6 @@ font-size: 14px; padding: 8px 15px  }
 .rightTick{ position: absolute; right: -6px; top: 7px; }
 .propic { list-style: none; margin-top: 13px;}
 .propic  .dropdown-toggle{color: #ffffff }
+
+.modal-header{border-bottom: 0px !important}
+/*.modal-body{border-bottom: 0px !important}*/

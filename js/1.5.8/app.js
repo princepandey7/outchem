@@ -1,4 +1,4 @@
-var app = angular.module("outChem", ['ngRoute']);
+var app = angular.module("outChem", ['ngRoute','angular.chosen']);
 
 app.provider('myPageCtx', function() {
   var defaultCtx = {
@@ -25,38 +25,94 @@ app.controller('MainCtrl', function($scope, myPageCtx) {
 app.controller('AdminCtrl', function($scope, myPageCtx, $http) {
   myPageCtx.headerUrl = 'admin-header.html';
   myPageCtx.footerUrl = 'admin-footer.html';
+  // $scope.person1 = {};
+  // $scope.person2 = {};
+  // $scope.person3 = {};
 
-  $scope.person1 = {};
-  $scope.person2 = {};
-  $scope.person3 = {};
+$http.get('http://staging-services.outchem.com:8003/api/v1/count/GetCount')
+.success(function (data, status, headers, config) {
+    $scope.buyerCnt = data.buyerCnt;
+    $scope.contractorCnt = data.contractorCnt;
+    $scope.productCnt = data.productCnt; 
+    $scope.serviceCnt = data.serviceCnt; 
+})
+.error(function (data, status, header, config) {
+  console.log(data);
+});
 
-  $scope.submitData = function (person, resultVarName)
-  {
-    var config = {
-      params: {
-        person: person
+ $scope.categoriesOffered = [
+      {id: 1, tite: 'Alaska'},
+      {id: 2, title: 'Arizona'},
+      {id: 3, title: 'Arkansas'},
+      {id: 4, title: 'California'}
+    ];
+
+$scope.SendContactPostData = function () {
+      var data = {
+          contactName: $scope.name,
+          contactEmail: $scope.email,
+          contactComments : $scope.comments,
+          mobileNo : $scope.mobileno
+      };
+
+      var config = {
+          headers : {
+              'Content-Type': 'application/json'
+          }
       }
-    };
 
-    console.log(person);
-
-
-    $http.post("http://staging.outchem.com/api/v1/contactus", null, config)
-      .then(function (data, status, headers, config)
-      {
-        console.log(data);
-        // $scope[resultVarName] = data;
+      $http.post('http://staging-services.outchem.com:8003/api/v1/contactus', data, config)
+      .success(function (data, status, headers, config) {
+          $scope.ServerResponse = data;
       })
-      .catch(function (data, status, headers, config)
-      {
-        $scope[resultVarName] = "SUBMIT ERROR";
+      .error(function (data, status, header, config) {
+          $scope.ServerResponse = "Data: " + data +
+              "<hr />status: " + status +
+              "<hr />headers: " + header +
+              "<hr />config: " + config;
       });
   };
+
+  // $scope.keywordNames = ["john", "bill", "charlie", "robert", "alban", "oscar", "marie", "celine", "brad", "drew", "rebecca", "michel", "francis", "jean", "paul", "pierre", "nicolas", "alfred", "gerard", "louis", "albert", "edouard", "benoit", "guillaume", "nicolas", "joseph"];
+
+  
 });
+
+
+ app.controller('searchController', function($scope, $http){
+    $scope.$watch('UserSearch', function(UserSearch) {
+        if (UserSearch && UserSearch.length > 2) {
+            $http.get('http://staging-services.outchem.com:8003/api/v1/keyword?searchKey=' + UserSearch).success(function(keywords) {
+                $scope.AllGlobalSearch = keywords;
+            }).error(function() {
+                // $scope.AllUser = [{name: 'test'}, {name: 'example'}];  
+            });
+        }
+    });
+});
+
 
 app.controller('ProfilerCtrl', function($scope, myPageCtx) {
   myPageCtx.headerUrl = 'profiler-header.html';
   myPageCtx.footerUrl = 'profiler-footer.html';
+
+     // $scope.state = [];
+    // $scope.selected = 2;
+
+    $scope.servicesOffered = [
+      {id: 1, tite: 'Alaska'},
+      {id: 2, title: 'Arizona'},
+      {id: 3, title: 'Arkansas'},
+      {id: 4, title: 'California'}
+    ];
+
+     $scope.productOffered = [
+      {id: 1, tite: 'Alaska'},
+      {id: 2, title: 'Arizona'},
+      {id: 3, title: 'Arkansas'},
+      {id: 4, title: 'California'}
+    ];
+  
 });
 
 app.config(['$routeProvider',function($routeProvider) {
@@ -258,16 +314,18 @@ app.controller('topCompanyController', function($scope){
     };
 });
 
-app.controller('packageSummaryController', function($scope){
-    $scope.packageSummary = {
-       packages:[
-          {package_name:'Keyword',package:'Package', days:180,location:'Canada'},
-          {package_name:'Keyword',package:'Package', days:365,location:'India'},
-          {package_name:'Keyword',package:'Package', days:365,location:'France'},
-          {package_name:'Keyword',package:'Package', days:180,location:'Netherlands'},
-          {package_name:'Keyword',package:'Package', days:120,location:'India'}
-       ],
-    };
+app.controller('packageSummaryController', function($scope, $http){
+
+$http.get('http://staging-services.outchem.com:8003/api/v1/package')
+.success(function (data, status, headers, config) {
+    $scope.packageSummary = data
+})
+.error(function (data, status, header, config) {
+  console.log(data);
+});
+
+
+
 });
 
 
@@ -458,3 +516,22 @@ app.controller('buyerProfileController', ['$scope','CustomerService', function($
   };
  
 }]);
+
+
+// function SearchCtrl($scope) {
+//     $scope.names = ["john", "bill", "charlie", "robert", "alban", "oscar", "marie", "celine", "brad", "drew", "rebecca", "michel", "francis", "jean", "paul", "pierre", "nicolas", "alfred", "gerard", "louis", "albert", "edouard", "benoit", "guillaume", "nicolas", "joseph"];
+// }
+
+
+// app.directive('autoComplete', function($timeout) {
+//     return function(scope, iElement, iAttrs) {
+//             iElement.autocomplete({
+//                 source: scope[iAttrs.uiItems],
+//                 select: function() {
+//                     $timeout(function() {
+//                       iElement.trigger('input');
+//                     }, 0);
+//                 }
+//             });
+//     };
+// });

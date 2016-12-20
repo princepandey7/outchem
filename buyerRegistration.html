@@ -1,43 +1,40 @@
 <div class="container">
 	<div class="col-lg-4">
-        <form name="userBuyerForm"  ng-controller="dropdownCtrl" ng-submit="submitBuyerData(userBuyerForm.$valid, 'ajaxSubmitResult1')" novalidate>
+        <!-- <form name="userBuyerForm"  ng-controller="dropdownCtrl" ng-submit="submitBuyerData(userBuyerForm.$valid, 'ajaxSubmitResult1')" novalidate> -->
+         <form name="userBuyerForm" ng-submit="SendBuyerPostData()" novalidate>
         	<h2 class="text-center">Buyer Registration Form</h2>
             <br />
             <div class="row">
                 <div class="col-lg-6" ng-class="{ 'has-error' : userBuyerForm.firstName.$invalid && !userBuyerForm.firstName.$pristine }">
-                    <input id="fname" type="text" class="form-control" placeholder="First Name*" name="firstName" ng-model="user.firstName" required />
+                    <input id="fname" type="text" class="form-control" placeholder="First Name*" name="firstName" ng-model="firstName" required />
                     <p  style="color:red" ng-show="userBuyerForm.firstName.$invalid && !userBuyerForm.firstName.$pristine" class="help-block">You first name is required.</p>
                 </div>
 
                 <div class="col-lg-6" ng-class="{ 'has-error' : userBuyerForm.lastName.$invalid && !userBuyerForm.lastName.$pristine }">
-                    <input id="lname" type="text" class="form-control" placeholder="Last Name*" name="lastName" ng-model="user.lastName" required />
+                    <input id="lname" type="text" class="form-control" placeholder="Last Name*" name="lastName" ng-model="lastName" required />
                     <p  style="color:red" ng-show="userBuyerForm.lastName.$invalid && !userBuyerForm.lastName.$pristine" class="help-block">You last name is required.</p>
                 </div>
             </div>
             <br />
-            <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.email.$invalid && !userBuyerForm.email.$pristine }">
-               <input id="fullEmail" type="email" class="form-control" placeholder="Email ID" name="email" ng-model="user.email" required />
-                <p  style="color:red" ng-show="userBuyerForm.email.$invalid && !userBuyerForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.emailAddress.$invalid && !userBuyerForm.emailAddress.$pristine }">
+               <input id="fullEmail" type="email" class="form-control" placeholder="Email ID" name="emailAddress" ng-model="emailAddress" required />
+                <p  style="color:red" ng-show="userBuyerForm.emailAddress.$invalid && !userBuyerForm.emailAddress.$pristine" class="help-block">Enter a valid email.</p>
             </div>
 
             <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.password.$invalid && !userBuyerForm.password.$pristine }">
-               <input id="fullPassword" type="password" class="form-control" placeholder="Password*" name="password" ng-model="user.password" required />
+               <input id="fullPassword" type="password" class="form-control" placeholder="Password*" name="password" ng-model="password" required />
                 <p  style="color:red" ng-show="userBuyerForm.password.$invalid && !userBuyerForm.password.$pristine" class="help-block">Enter a valid Password.</p>
             </div>
 
-            <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.phone.$invalid && !userBuyerForm.phone.$pristine }">
-               <input id="fullPhone" type="text" class="form-control" placeholder="Phone number*" name="phone" ng-model="user.phone" required />
-                <p  style="color:red" ng-show="userBuyerForm.phone.$invalid && !userBuyerForm.phone.$pristine" class="help-block">Enter a valid Phone Number.</p>
+            <div class="form-group" ng-class="{ 'has-error' : userBuyerForm.phoneNumber.$invalid && !userBuyerForm.phoneNumber.$pristine }">
+               <input id="fullPhone" type="text" class="form-control" placeholder="Phone number*" name="phoneNumber" ng-model="phoneNumber" required />
+                <p  style="color:red" ng-show="userBuyerForm.phoneNumber.$invalid && !userBuyerForm.phoneNumber.$pristine" class="help-block">Enter a valid Phone Number.</p>
             </div>
 
 
             <div class="row">
                 <div class="col-lg-6">
-                	<select ng-model="customer.Country"                
-                            ng-options="obj.id as obj.country for obj in countries"
-                            ng-change="getCountryStates()"
-                            class="form-control" 
-                            ng-required="true"
+                	<select ng-model="country" ng-options="obj.id as obj.country for obj in countries" ng-change="getCountryStates()" class="form-control" ng-required="true"
                             id="country" style="border:1; -webkit-appearance: none; -moz-appearance: none; background:url(images/arrow.png) no-repeat;background-position:right center !important; margin-right:2px;">
                         <option value="">Country*</option>
                     </select>
@@ -45,21 +42,15 @@
 
 
                 <div class="col-lg-6">
-                    <select ng-model="customer.State" 
-                            ng-options="x.Id as x.state for x in sates"
-                            ng-change = "getStateCities()"
-                            class="form-control"
-                            ng-required="true"
+                    <select ng-model="state"  ng-options="x.Id as x.state for x in sates" ng-change = "getStateCities()"
+                            class="form-control" ng-required="true"
                             id="state" style="border:1; -webkit-appearance: none; -moz-appearance: none; background:url(images/arrow.png) no-repeat;background-position:right center !important; margin-right:2px;">
                         <option value="">State*</option>
                     </select>
                 </div>
                 <br/> <br/>
                 <div class="col-lg-6">
-                    <select ng-model="customer.City"
-                ng-options="x.Id as x.city for x in cities"
-                class="form-control" 
-                ng-required="true"
+                    <select ng-model="city" ng-options="x.Id as x.city for x in cities" class="form-control" ng-required="true"
                 id="city" class="form-control" style="border:1; -webkit-appearance: none; -moz-appearance: none; background:url(images/arrow.png) no-repeat;background-position:right center !important; margin-right:2px;">
                         <option value="">City*</option>
                     </select>
@@ -69,8 +60,8 @@
             <div class="row">
             	<div class="col-lg-8">
     			<label>
-    				<input type="checkbox" name="checkAgree" ng-model="checkAgree" /><span>Terms & Conditions*</span>
-                     <p ng-show="signupForm.checkAgree.$error.required && !signupForm.checkAgree.$pristine" class="help-block">You must agree to our terms and Conditions.</p>
+    				<input type="checkbox" name="termsCondition" ng-model="termsCondition" /><span>Terms & Conditions*</span>
+                     <p ng-show="signupForm.termsCondition.$error.required && !signupForm.termsCondition.$pristine" class="help-block">You must agree to our terms and Conditions.</p>
                      
     			</label>
                 

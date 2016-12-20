@@ -20,13 +20,31 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Login Form</h4>
+        <h4 class="modal-title">Login Now</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <!-- <p>Some text in the modal.</p> -->
+        <div class="col-lg-12">
+          <!-- <h3>Login Now</h3> -->
+            <br />
+            <p class="font18">Enter your username and password:</p>
+            <br />
+                <input type="text" name="username" id="username" class="form-control border-left" placeholder="Email ID or Username" />
+            <br />
+                <input type="password" name="pwd" id="pwd" class="form-control border-left" placeholder="Password" />
+            <br />
+            <div class="col-lg-12 padding0">
+                <div class="col-lg-6 pull-left padding0">
+                    <a href="">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            <div class="col-lg-12 text-right padding0">
+                <input type="submit" name="login" id="login" class="loginBtn" value="Login  >" />
+            </div>
       </div>
     </div>
   </div>
@@ -39,14 +57,37 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Sign-up Form</h4>
+        <!-- <h4 class="modal-title">Sign-up Form</h4> -->
+        <h3 class="text-center">Sign Up!</h3>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <div class="col-lg-12">
+         <br />
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img class="img-responsive img-center" src="images/sign-up.png" onMouseOver="this.src='images/sign-up-hover option.png'" onMouseOut="this.src='images/sign-up.png'" />
+                    <br/>
+                    <div class="btn">
+                        <label>
+                            <input type="radio" name="radio" id="buyer" /><span><a href="#buyerRegistration">Buyer</a></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img class="img-responsive img-center" src="images/sign-up.png" onMouseOver="this.src='images/sign-up-hover option.png'" onMouseOut="this.src='images/sign-up.png'" />
+                    <br/>
+                    <div class="btn">
+                        <label>
+                            <input type="radio" name="radio" id="contractor" /><span><a href="#contrctrRegister">Contractor</a></span>
+                        </label>
+                    </div>            
+                </div>
+            </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+       <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      </div> 
     </div>
   </div>
 </div>

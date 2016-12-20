@@ -25,17 +25,11 @@
 			<div ng-show="isSet(1)">
 				<div class="row">
 					<div class="category">
-			        	<div class="form-group col-sm-6 padding0" style="line-height:32px">
+			        	<div class="form-group col-sm-12 padding0" style="line-height:32px">
 			            	<label>Create New Category</label>
-			            </div>
-			            <div class="form-group col-sm-6 padding0">
-			            	<div class="input-group input-groupA margin0">
-									<input type="text" class="form-control" placeholder="Type a category" aria-describedby="basic-addon2">
-									<span class="input-group-addon">&#43;</span>
-							</div>
-			            </div>
-			            <div class="form-group col-sm-12 padding0 margin0">
-			            		<textarea class="form-control" rows="8"></textarea>
+				            <div class="form-group col-sm-6 padding0 pull-right">
+								<select chosen multiple ng-model="categories" ng-options="categories.id as categories.title for categories in categoriesOffered"> </select>
+				            </div>
 			            </div>
 			        </div>
 			        <div style="clear:both"></div>
@@ -44,29 +38,50 @@
 			            	<label>Create New Keyword</label>
 			            </div>
 			            <div style="clear:both"></div>
-			            <div class="form-group col-sm-6 padding0 margin0">
-			            	<div class="input-group input-groupA">
-									<input type="text" class="form-control" placeholder="Type here" aria-describedby="basic-addon2">
-									<span class="input-group-addon">&#43;</span>
-							</div>
-			            </div>
-			            <div class="form-group col-sm-6 pr0 margin0">
-			            	<div class="input-group input-groupA">
-									<select class="form-control">
-										<option>Select Category</option>
-									</select>
-							</div>
-			            </div>
-			            <div class="form-group col-sm-12 padding0 margin0">
-			            	<textarea class="form-control" rows="8"></textarea>
-			            </div>
+			            <form name="adminCreateKeywordFrm" ng-submit="SendKeywordCreatePostData()" novalidate>
+			             	<div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.name.$invalid && !adminCreateKeywordFrm.name.$pristine }">
+			                    <input id="fullName" type="text" class="form-control" placeholder="Keywod Name" name="name" ng-model="name" required />
+			                    <p ng-show="adminCreateKeywordFrm.name.$invalid && !adminCreateKeywordFrm.name.$pristine" class="help-block">You Keyword Name is required.</p>
+			                </div>
+
+						    <div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.description.$invalid && !adminCreateKeywordFrm.description.$pristine }">
+			                    <textarea id="fullComment" name="description" ng-model="description" required class="form-control" rows="3" id="" placeholder="Your comments or queries"></textarea>
+			                     <p ng-show="adminCreateKeywordFrm.description.$invalid && !adminCreateKeywordFrm.description.$pristine" class="help-block">Enter a description or quiries.</p>
+			                </div>
+
+						    <div class="form-group">
+						        <select class="form-control">
+									<option>Select Category</option>
+								</select>
+						    </div>
+						    <button type="submit" class="btn btn-primary">Create New Keyword </button>
+					    </form>
 			        </div>
 			         <div class="col-sm-6 ">
 			        	<div class="form-group col-sm-12 padding0" style="line-height:32px">
 			            	<label>Create New Listing Package</label>
 			            </div>
 			            <div style="clear:both"></div>
-			            <div class="form-group col-sm-6 pl0 margin0">
+			            <form name="adminCreateListPackageFrm" ng-submit="SendListPackagePostData()" novalidate>
+			             	<div class="form-group" ng-class="{ 'has-error' : adminCreateListPackageFrm.name.$invalid && !adminCreateListPackageFrm.name.$pristine }">
+			                    <input id="fullName" type="text" class="form-control" placeholder="Keywod Name" name="name" ng-model="name" required />
+			                    <p ng-show="adminCreateListPackageFrm.name.$invalid && !adminCreateListPackageFrm.name.$pristine" class="help-block">You Pakage Name is required.</p>
+			                </div>
+
+						    <div class="form-group" ng-class="{ 'has-error' : adminCreateListPackageFrm.mobileno.$invalid && !adminCreateListPackageFrm.mobileno.$pristine }">
+			                   <input id="fullMobile" type="text" class="form-control" placeholder="Your Mobile Number" name="mobileno" ng-model="mobileno" required /><br />
+			                    <p ng-show="adminCreateListPackageFrm.mobileno.$invalid && !adminCreateListPackageFrm.mobileno.$pristine" class="help-block">Enter a valid Mobile No.</p>
+			                </div>
+
+						    <div class="form-group">
+						        <select class="form-control">
+									<option>Select Category</option>
+								</select>
+						    </div>
+						    <button type="submit" class="btn btn-primary">Create New Keyword </button>
+					    </form>
+
+			            <!-- <div class="form-group col-sm-6 pl0 margin0">
 			            	<div class="input-group input-groupA">
 									<input type="text" class="form-control" placeholder="Package Name" aria-describedby="basic-addon2">
 									<span class="input-group-addon">&#43;</span>
@@ -80,7 +95,7 @@
 			            </div>
 			            <div class="form-group col-sm-12 padding0 margin0">
 			            		<textarea class="form-control" rows="8"></textarea>
-			            </div>
+			            </div> -->
 			        </div>
 				</div>
 			</div>
