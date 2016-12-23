@@ -39,22 +39,23 @@
 			            </div>
 			            <div style="clear:both"></div>
 			            <form name="adminCreateKeywordFrm" ng-submit="SendKeywordCreatePostData()" novalidate>
-			             	<div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.name.$invalid && !adminCreateKeywordFrm.name.$pristine }">
-			                    <input id="fullName" type="text" class="form-control" placeholder="Keywod Name" name="name" ng-model="name" required />
-			                    <p ng-show="adminCreateKeywordFrm.name.$invalid && !adminCreateKeywordFrm.name.$pristine" class="help-block">You Keyword Name is required.</p>
+			             	<div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.keyword_name.$invalid && !adminCreateKeywordFrm.keyword_name.$pristine }">
+			                    <input id="fullName" type="text" class="form-control" placeholder="Keywod Name" name="keyword_name" ng-model="keyword_data.keywordName" required />
+			                    <p ng-show="adminCreateKeywordFrm.keyword_name.$invalid && !adminCreateKeywordFrm.keyword_name.$pristine" class="help-block">You Keyword Name is required.</p>
 			                </div>
 
-						    <div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.description.$invalid && !adminCreateKeywordFrm.description.$pristine }">
-			                    <textarea id="fullComment" name="description" ng-model="description" required class="form-control" rows="3" id="" placeholder="Your comments or queries"></textarea>
-			                     <p ng-show="adminCreateKeywordFrm.description.$invalid && !adminCreateKeywordFrm.description.$pristine" class="help-block">Enter a description or quiries.</p>
+						    <div class="form-group" ng-class="{ 'has-error' : adminCreateKeywordFrm.keyword_description.$invalid && !adminCreateKeywordFrm.keyword_description.$pristine }">
+			                    <textarea id="fullComment" name="keyword_description" ng-model="keyword_data.keywordDescription" required class="form-control" rows="3" id="" placeholder="Your comments or queries"></textarea>
+			                     <p ng-show="adminCreateKeywordFrm.keyword_description.$invalid && !adminCreateKeywordFrm.keyword_description.$pristine" class="help-block">Enter a description or quiries.</p>
 			                </div>
 
 						    <div class="form-group">
-						        <select class="form-control">
-									<option>Select Category</option>
+						        <select class="form-control" ng-model="keyword_data.categoryId" ng-options="i.id as i.name for i in categories">	
+								    <option value=""> Select Category </option>
 								</select>
 						    </div>
-						    <button type="submit" class="btn btn-primary">Create New Keyword </button>
+                			<button ng-click="clickEvt()" class="loginBtn" ng-disabled="adminCreateKeywordFrm.$invalid">Create New Keyword</button>
+
 					    </form>
 			        </div>
 			         <div class="col-sm-6 ">
@@ -64,13 +65,13 @@
 			            <div style="clear:both"></div>
 			            <form name="adminCreateListPackageFrm" ng-submit="SendListPackagePostData()" novalidate>
 			             	<div class="form-group" ng-class="{ 'has-error' : adminCreateListPackageFrm.name.$invalid && !adminCreateListPackageFrm.name.$pristine }">
-			                    <input id="fullName" type="text" class="form-control" placeholder="Keywod Name" name="name" ng-model="name" required />
+			                    <input id="fullName" type="text" class="form-control" placeholder="Package Name" name="name" ng-model="name" required />
 			                    <p ng-show="adminCreateListPackageFrm.name.$invalid && !adminCreateListPackageFrm.name.$pristine" class="help-block">You Pakage Name is required.</p>
 			                </div>
 
 						    <div class="form-group" ng-class="{ 'has-error' : adminCreateListPackageFrm.mobileno.$invalid && !adminCreateListPackageFrm.mobileno.$pristine }">
-			                   <input id="fullMobile" type="text" class="form-control" placeholder="Your Mobile Number" name="mobileno" ng-model="mobileno" required /><br />
-			                    <p ng-show="adminCreateListPackageFrm.mobileno.$invalid && !adminCreateListPackageFrm.mobileno.$pristine" class="help-block">Enter a valid Mobile No.</p>
+			                   <input id="fullMobile" type="text" class="form-control" placeholder="Add Days" name="mobileno" ng-model="mobileno" required /><br />
+			                    <p ng-show="adminCreateListPackageFrm.mobileno.$invalid && !adminCreateListPackageFrm.mobileno.$pristine" class="help-block">Add Days</p>
 			                </div>
 
 						    <div class="form-group">
@@ -78,7 +79,7 @@
 									<option>Select Category</option>
 								</select>
 						    </div>
-						    <button type="submit" class="btn btn-primary">Create New Keyword </button>
+						    <button ng-click="clickEvt()" class="loginBtn" ng-disabled="adminCreateKeywordFrm.$invalid">Create New Listing Package</button>
 					    </form>
 
 			            <!-- <div class="form-group col-sm-6 pl0 margin0">

@@ -18,16 +18,61 @@ app.provider('myPageCtx', function() {
   };
   
 });
-app.controller('MainCtrl', function($scope, myPageCtx) {
+
+
+
+
+app.controller('MainCtrl', function($rootScope, $scope, myPageCtx) {
   $scope.pageCtx = myPageCtx;
+
+  // $rootScope.config = {
+  //         headers : {
+  //             'Content-Type': 'application/json'
+  //         }
+  //     }
+
 });
 
-app.controller('AdminCtrl', function($scope, myPageCtx, $http) {
+app.controller('AdminCtrl', function($rootScope, $scope, myPageCtx, $http) {
+
   myPageCtx.headerUrl = 'admin-header.html';
   myPageCtx.footerUrl = 'admin-footer.html';
   // $scope.person1 = {};
   // $scope.person2 = {};
   // $scope.person3 = {};
+
+  $rootScope.config = {
+          headers : {
+              'Content-Type': 'application/json'
+          }
+      }
+
+$scope.demo = "hello";
+  console.log($scope.keyword_name);
+
+$scope.keyword_data = {
+          count : 0,
+          activeFlag : true
+      };
+
+      // var config = {
+      //     headers : {
+      //         'Content-Type': 'application/json'
+      //     }
+      // }
+
+   $scope.clickEvt = function(){
+       $http.post('http://staging-services.outchem.com:8003/api/v1/keyword', $scope.keyword_data, $rootScope.config)
+      .success(function (data, status, headers, config) {
+          $scope.ServerResponse = data;
+      })
+      .error(function (data, status, header, config) {
+          $scope.ServerResponse = data;
+      });
+
+      console.log($scope.keyword_data);
+    }
+
 
 $http.get('http://staging-services.outchem.com:8003/api/v1/count/GetCount')
 .success(function (data, status, headers, config) {
@@ -39,6 +84,16 @@ $http.get('http://staging-services.outchem.com:8003/api/v1/count/GetCount')
 .error(function (data, status, header, config) {
   console.log(data);
 });
+
+
+$http.get('http://staging-services.outchem.com:8003/api/v1/categories')
+.success(function (data, status, headers, config) {
+    $scope.categories = data.categories;
+})
+.error(function (data, status, header, config) {
+  console.log(data);
+});
+
 
  $scope.categoriesOffered = [
       {id: 1, tite: 'Alaska'},
@@ -72,6 +127,11 @@ $scope.SendContactPostData = function () {
               "<hr />config: " + config;
       });
   };
+
+  //   $scope.SendKeywordCreatePostData = function () {
+  // };
+
+
 
   // $scope.keywordNames = ["john", "bill", "charlie", "robert", "alban", "oscar", "marie", "celine", "brad", "drew", "rebecca", "michel", "francis", "jean", "paul", "pierre", "nicolas", "alfred", "gerard", "louis", "albert", "edouard", "benoit", "guillaume", "nicolas", "joseph"];
 
@@ -279,6 +339,7 @@ app.controller('TabController', ['$scope', function($scope) {
 }]);
 
 app.controller('Tab1Controller', ['$scope', function($scope) {
+  // $scope.demo = "prince";
     $scope.tab = 1;
     $scope.setTab = function(newTab){
       $scope.tab = newTab;
