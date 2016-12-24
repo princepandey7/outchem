@@ -182,7 +182,7 @@ border-left: 2px solid #51B821;border-right: 2px solid #51B821; margin-bottom:30
 
 .search-div{ margin: 150px auto; }
 .search-div .input-group{max-width: 300px; margin: 0 auto }
-.search-div .input-group .btn{ border: 1px solid #ccc; height: 34px; background: #cccccc; }
+.search-div .input-group .btn{ border: 1px solid #ccc; height: 34px; background: #cccccc; position: absolute; }
 .carausolHome{ margin: 100px 0px;  }
 .carausolHome .filcolor{ background: #51B821; height: auto;padding: 125px 0px; text-align: center; color: #ffffff }
 .carausolHome .filcolor img{ width: 50px; }
@@ -322,7 +322,7 @@ color:#51b821; border-bottom: 2px solid #51b821; border-radius:0px;  }
     color: #454545;
     font-size: 12px;
 }
-.package-edit-icon{background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
+.package-edit-icon{ background-image:url('../images/edit2.png'); display: block;width: 20px; height: 20px}
 .package-delete-icon{background-image:url('../images/delete2.png'); display: block;width: 16px; height: 20px}
 .company-package-title h2{color: #454545; text-align: center; text-transform: capitalize; font-size: 22px; font-weight: bold;}
 
@@ -354,7 +354,7 @@ font-size: 14px; padding: 8px 15px  }
 .rightTick{ position: absolute; right: -6px; top: 7px; }
 .propic { list-style: none; margin-top: 13px;}
 .propic  .dropdown-toggle{color: #ffffff }
-
+table tr td a{ float: left;  margin-left: 10px;}
 .modal-header{border-bottom: 0px !important}
 /*.modal-body{border-bottom: 0px !important}*/
 .dropdown-menu{left: 100px;}
